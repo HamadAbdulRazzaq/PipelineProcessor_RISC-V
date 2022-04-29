@@ -36,9 +36,9 @@ ble  x7, x4, Inner_Loop_Exit 	# if A[i] <= key -> break
 Inner_Loop:
 SW   x7, 4(x6)					# A[i+1] = A[i]
 addi x5, x5, -4 				# i = i - 1
-ble  x5, x0, Inner_Loop_Exit 	# if i <= 0 -> break
 add  x6, x5, x10 				# i + base address
 LW   x7, 0(x6) 					# {x7 = A[i]}
+ble  x5, x0, Inner_Loop_Exit 	# if i <= 0 -> break
 bgt  x7, x4, Inner_Loop 		# if A[i] > key -> continue
 Inner_Loop_Exit:
 SW   x4, 4(x6) 					# A[i+1] = key
