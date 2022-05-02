@@ -1,3 +1,16 @@
+`include "Adder.v"
+`include "ALU_64_bit.v"
+`include "ALU_Control.v"
+`include "branch_module.v"
+`include "Control_Unit.v"
+`include "Data_Memory.v"
+`include "imm_data_gen.v"
+`include "Instruction_Memory.v"
+`include "instruction.v"
+`include "MUX.v"
+`include "registerFile.v"
+`include "shift_left.v"
+`include "Program_Counter.v"
 module RISC_V_Processor(
   input clk,
   input reset

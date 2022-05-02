@@ -48,6 +48,5 @@ module branch_module(
             bne <= 1'b0;
             beq <= 1'b0;
       end
-      if 
     end
 endmodule
