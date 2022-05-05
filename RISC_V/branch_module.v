@@ -7,8 +7,7 @@ module branch_module(
   output reg beq,
   output reg bge,
   output reg blt,
-  output reg bgt,
-  output reg ble
+  output reg to_branch
 );
   always @(*)
     begin
@@ -25,7 +24,7 @@ module branch_module(
             bge <= 1'b0;
             blt <= 1'b0;
         end
-        if ((pos || zero) && funct3 ==3'b101) begin
+        else if ((pos || zero) && funct3 ==3'b101) begin
             bne <= 1'b0;
             beq <= 1'b0;
             bge <= 1'b1;
@@ -47,6 +46,9 @@ module branch_module(
       else begin
             bne <= 1'b0;
             beq <= 1'b0;
+            blt <= 1'b0;
+            bge <= 1'b0;
       end
+      to_branch <= branch && (bne || beq || blt || bge);
     end
 endmodule

@@ -4,7 +4,18 @@ module Data_Memory(
   input [63:0] Write_Data,
   input MemWrite,
   input MemRead,
-  output reg [63:0] Read_Data
+  output reg [63:0] Read_Data,
+  output reg [63:0] Index_0,
+  output reg [63:0] Index_1,
+  output reg [63:0] Index_2,
+  output reg [63:0] Index_3,
+  output reg [63:0] Index_4,
+  output reg [63:0] Index_5,
+  output reg [63:0] Index_6,
+  output reg [63:0] Index_7,
+  output reg [63:0] Index_8,
+  output reg [63:0] Index_9,
+  input [2:0] funct3
 );
   reg [7:0] DMem [63:0];
   initial begin
@@ -75,6 +86,13 @@ module Data_Memory(
   end
   always @(posedge clk) begin
     if (MemWrite) begin
+      if (funct3 == 3'b010) begin
+      DMem[Mem_Addr] = Write_Data[7:0];
+      DMem[Mem_Addr+1] = Write_Data[15:8];
+      DMem[Mem_Addr+2] = Write_Data[23:16];
+      DMem[Mem_Addr+3] = Write_Data[31:24];  
+      end
+      else if (funct3 == 3'b011) begin
       DMem[Mem_Addr] = Write_Data[7:0];
       DMem[Mem_Addr+1] = Write_Data[15:8];
       DMem[Mem_Addr+2] = Write_Data[23:16];
@@ -82,13 +100,30 @@ module Data_Memory(
       DMem[Mem_Addr+4] = Write_Data[39:32];
       DMem[Mem_Addr+5] = Write_Data[47:40];
       DMem[Mem_Addr+6] = Write_Data[55:48];
-      DMem[Mem_Addr+7] = Write_Data[63:56];
+      DMem[Mem_Addr+7] = Write_Data[63:56];  
+      end
+      
     end
   end
   always @(*) begin
     if (MemRead) begin
-      Read_Data = {DMem[Mem_Addr + 7], DMem[Mem_Addr + 6], DMem[Mem_Addr + 5], DMem[Mem_Addr + 4], DMem[Mem_Addr + 3], DMem[Mem_Addr + 2], DMem[Mem_Addr + 1], DMem[Mem_Addr]};
+      if (funct3 == 3'b010) begin
+        Read_Data = {32'd0, DMem[Mem_Addr + 3], DMem[Mem_Addr + 2], DMem[Mem_Addr + 1], DMem[Mem_Addr]};
+      end
+      else if (funct3 == 3'b011) begin
+        Read_Data = {DMem[Mem_Addr + 7], DMem[Mem_Addr + 6], DMem[Mem_Addr + 5], DMem[Mem_Addr+4], DMem[Mem_Addr + 3], DMem[Mem_Addr + 2], DMem[Mem_Addr + 1], DMem[Mem_Addr]};
+      end
     end
+    Index_0 <= {32'b0,DMem[3],DMem[2],DMem[1],DMem[0]};
+    Index_1 <= {32'b0,DMem[7],DMem[6],DMem[5],DMem[4]};
+    Index_2 <= {32'b0,DMem[11],DMem[10],DMem[9],DMem[8]};
+    Index_3 <= {32'b0,DMem[15],DMem[14],DMem[13],DMem[12]};
+    Index_4 <= {32'b0,DMem[19],DMem[18],DMem[17],DMem[16]};
+    Index_5 <= {32'b0,DMem[23],DMem[22],DMem[21],DMem[20]};
+    Index_6 <= {32'b0,DMem[27],DMem[26],DMem[25],DMem[24]};
+    Index_7 <= {32'b0,DMem[31],DMem[30],DMem[29],DMem[28]};
+    Index_8 <= {32'b0,DMem[35],DMem[34],DMem[33],DMem[32]};
+    Index_9 <= {32'b0,DMem[39],DMem[38],DMem[37],DMem[36]};
   end
 endmodule
 /////////

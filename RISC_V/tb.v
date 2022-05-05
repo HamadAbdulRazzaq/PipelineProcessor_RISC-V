@@ -15,13 +15,13 @@ module tb();
     dreset = 1'b1;
     #10
     dreset = 1'b0;
-    #50
+    #4000
     dreset = 1'b1;
     $finish;
   end
   
   initial begin
     $dumpfile("tests.vcd");
-    $dumpvars(2,tb);
+    $dumpvars(3,tb);
   end
 endmodule

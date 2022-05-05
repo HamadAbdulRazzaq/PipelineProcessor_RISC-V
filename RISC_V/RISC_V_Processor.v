@@ -44,7 +44,19 @@ module RISC_V_Processor(
   wire [63:0] shifted_imm_data;
   wire [63:0] PC_offset_branch;
   wire mux3_select;
-  
+  wire bge, blt, bne, beq;
+  wire Pos;
+  wire [63:0] Index_0;
+  wire [63:0] Index_1;
+  wire [63:0] Index_2;
+  wire [63:0] Index_3;
+  wire [63:0] Index_4;
+  wire [63:0] Index_5;
+  wire [63:0] Index_6;
+  wire [63:0] Index_7;
+  wire [63:0] Index_8;
+  wire [63:0] Index_9;
+  wire to_branch;
   Program_Counter p1(clk, reset, PC_In, PC_Out);
   Adder a1(PC_Out, 64'd4, PC_offset_4);
   Instruction_Memory i1(PC_Out, IMem_out);
@@ -54,12 +66,13 @@ module RISC_V_Processor(
   registerFile r1(clk, reset, rs1, rs2, rd, write_data, RegWrite, readdata1, readdata2);
   ALU_Control a2(ALUOp,{IMem_out[30],IMem_out[14:12]},Operation);
   MUX m1(readdata2,	 imm_data, ALUSrc, mux_1_out);
-  ALU_64_bit a3(readdata1, mux_1_out, Operation, Zero, Result);
-  Data_Memory d1(clk, Result, readdata2, MemWrite, MemRead, DMem_Read);
+  ALU_64_bit a3(readdata1, mux_1_out, Operation, Zero, Result, Pos);
+  Data_Memory d1(clk, Result, readdata2, MemWrite, MemRead, DMem_Read, Index_0, Index_1, Index_2, Index_3, Index_4, Index_5, Index_6, Index_7, Index_8, Index_9, funct3);
   MUX m2(Result,DMem_Read,  MemtoReg, write_data);
   shift_left s1(imm_data, shifted_imm_data);
   Adder a4(PC_Out, shifted_imm_data, PC_offset_branch);
-  MUX m3(PC_offset_4, PC_offset_branch, Branch&&Zero, PC_In);
+  branch_module b1(Zero, Pos, Branch, funct3, bne, beq, bge, blt, to_branch);
+  MUX m3(PC_offset_4, PC_offset_branch, to_branch, PC_In);
   
   
 endmodule

@@ -3,7 +3,8 @@ module ALU_64_bit(
   input [63:0] b,
   input [3:0]ALUOp,
   output reg Zero,
-  output reg [63:0] Result
+  output reg [63:0] Result,
+  output reg Pos
 );
   
   always @(*) begin
@@ -24,7 +25,8 @@ module ALU_64_bit(
   end
     if (Result == 0)
       Zero = 1;
-      else
-        Zero = 0;
+    else
+      Zero = 0;
+    Pos <= ~Result[63];
   end
 endmodule
