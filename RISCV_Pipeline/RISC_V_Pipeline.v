@@ -10,6 +10,9 @@
 `include "imm_data_gen.v"
 `include "registerFile.v"
 `include "Control_Unit.v"
+`include "ALU_64_bit.v"
+`include "ALU_Control.v"
+`include "shift_left.v"
 module RISC_V_Pipeline(
     input clk,
     input reset
@@ -56,6 +59,24 @@ wire [3:0] Funct_EX;
 wire [4:0] rs1_EX;
 wire [4:0] rs2_EX;
 wire [4:0] rd_EX;
+wire [3:0] Operation_EX;
+wire [63:0] shift_Left_out;
+wire [63:0] Branch_Adder_Out_EX;
+wire [63:0] MUX_out_EX;
+wire [63:0] Result_EX;
+wire Zero_EX;
+wire pos_EX;
+wire RegWrite_MEM;
+wire MemtoReg_MEM;
+wire MemWrite_MEM;
+wire MemRead_MEM;
+wire Branch_MEM;
+wire Zero_MEM;
+wire [63:0] Result_MEM;
+wire [63:0] Branch_Adder_Out_MEM;
+wire [63:0] Read_Data_2_MEM;
+wire [4:0] rd_MEM;
+wire pos_MEM;
 Program_Counter p1(clk, reset, Init_PC_In, Init_PC_Out);
 Adder a1(Init_PC_Out, 64'd4, MUX1_Input1);
 MUX m1(MUX1_Input1,MUX1_Input2, to_branch,Init_PC_In);
@@ -66,6 +87,15 @@ imm_data_gen i4(Instruction_ID, imm_data_ID);
 registerFile r1(clk, reset, rs1_ID, rs2_ID, rd_WB, MUX5_Out, RegWrite_WB, Read_Data_1_ID, Read_Data_2_ID);
 Control_Unit c1(opcode_ID, ALUOp_ID, Branch_ID, MemRead_ID, MemtoReg_ID, MemWrite_ID, ALUSrc_ID, RegWrite_ID);
 ID_EX i5(clk, reset, {Instruction_ID[30], Instruction_ID[14:12]}, ALUOp_ID, MemtoReg_ID, RegWrite_ID, Branch_ID, MemWrite_ID, MemRead_ID, ALUSrc_ID, Read_Data_1_ID, Read_Data_2_ID, rd_ID, rs1_ID, rs2_ID, imm_data_ID, PC_Out_ID, PC_Out_EX, Funct_EX, ALUOp_EX, MemtoReg_EX, RegWrite_EX, Branch_EX, MemWrite_EX, MemRead_EX, ALUSrc_EX, Read_Data_1_EX, Read_Data_2_EX, rs1_EX, rs2_EX, rd_EX, imm_data_EX);
+// Implementing standard Pipe Line Stage 3
+ALU_Control a2(ALUOp_EX, Funct_EX, Operation_EX);
+shift_left s1(imm_data_EX, shift_Left_out);
+Adder a3(PC_Out_EX, shift_Left_out, Branch_Adder_Out_EX);
+MUX m2(Read_Data_2_EX, imm_data_EX, ALUSrc_EX, MUX_out_EX);
+ALU_64_bit a4(Read_Data_1_EX, MUX_out_EX, Operation_EX, Zero_EX, Result_EX, pos_EX);
+EX_MEM e1(clk, reset, rd_EX, Branch_EX, MemWrite_EX, MemRead_EX, MemtoReg_EX, RegWrite_EX, Branch_Adder_Out_EX, Result_EX, Zero_EX, Read_Data_2_EX, Read_Data_2_MEM, Branch_Adder_Out_MEM, rd_MEM, Branch_MEM, MemWrite_MEM, MemRead_MEM, MemtoReg_MEM, RegWrite_MEM, Result_MEM, Zero_MEM);
+
+
 
 
 
