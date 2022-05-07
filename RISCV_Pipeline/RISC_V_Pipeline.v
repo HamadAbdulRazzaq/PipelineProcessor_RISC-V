@@ -13,6 +13,8 @@
 `include "ALU_64_bit.v"
 `include "ALU_Control.v"
 `include "shift_left.v"
+`include "branch_module.v"
+`include "Data_Memory.v"
 module RISC_V_Pipeline(
     input clk,
     input reset
@@ -24,7 +26,7 @@ wire [63:0] MUX1_Input2;
 wire [31:0] Instruction_IF;
 wire [31:0] Instruction_ID;
 wire [63:0] PC_Out_ID;
-wire to_branch;
+// wire to_branch;
 wire [6:0] opcode_ID;
 wire [4:0] rd_ID;
 wire [2:0] f3_ID;
@@ -77,9 +79,19 @@ wire [63:0] Branch_Adder_Out_MEM;
 wire [63:0] Read_Data_2_MEM;
 wire [4:0] rd_MEM;
 wire pos_MEM;
+wire to_branch_MEM;
+wire blt_MEM;
+wire bge_MEM;
+wire bne_MEM;
+wire beq_MEM;
+wire [2:0] funct3_MEM;
+wire [63:0] Read_Data_MEM;
+wire MemtoReg_WB;
+wire [63:0] Read_Data_WB;
+wire [63:0]Result_WB;
 Program_Counter p1(clk, reset, Init_PC_In, Init_PC_Out);
 Adder a1(Init_PC_Out, 64'd4, MUX1_Input1);
-MUX m1(MUX1_Input1,MUX1_Input2, to_branch,Init_PC_In);
+MUX m1(MUX1_Input1,MUX1_Input2, to_branch_MEM,Init_PC_In);
 Instruction_Memory i1(Init_PC_Out, Instruction_IF);
 IF_ID i2(clk, reset, Init_PC_Out, Instruction_IF, Instruction_ID, PC_Out_ID);
 instruction i3(Instruction_ID, opcode_ID, rd_ID, f3_ID, rs1_ID, rs2_ID, f7_ID);
@@ -94,6 +106,11 @@ Adder a3(PC_Out_EX, shift_Left_out, Branch_Adder_Out_EX);
 MUX m2(Read_Data_2_EX, imm_data_EX, ALUSrc_EX, MUX_out_EX);
 ALU_64_bit a4(Read_Data_1_EX, MUX_out_EX, Operation_EX, Zero_EX, Result_EX, pos_EX);
 EX_MEM e1(clk, reset, rd_EX, Branch_EX, MemWrite_EX, MemRead_EX, MemtoReg_EX, RegWrite_EX, Branch_Adder_Out_EX, Result_EX, Zero_EX, Read_Data_2_EX, Read_Data_2_MEM, Branch_Adder_Out_MEM, rd_MEM, Branch_MEM, MemWrite_MEM, MemRead_MEM, MemtoReg_MEM, RegWrite_MEM, Result_MEM, Zero_MEM);
+// Stage 4
+branch_module b1(Zero_MEM, pos_MEM, Branch_MEM, funct3_MEM, bne_MEM, beq_MEM, bge_MEM, blt_MEM, to_branch_MEM);
+Data_Memory d1(clk, Result_MEM, Read_Data_2_MEM, MemWrite_MEM, MemRead_MEM, Read_Data_MEM, funct3_MEM);
+MEM_WB m0(clk, reset, Result_MEM, Read_Data_MEM, rd_MEM, MemtoReg_MEM, RegWrite_MEM, MemtoReg_WB, RegWrite_WB, Result_WB, Read_Data_WB, rd_WB);
+MUX m5(Result_WB, Read_Data_WB, MemtoReg_WB, MUX5_Out);
 
 
 
