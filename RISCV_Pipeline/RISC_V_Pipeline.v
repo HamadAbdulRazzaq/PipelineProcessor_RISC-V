@@ -111,13 +111,4 @@ branch_module b1(Zero_MEM, pos_MEM, Branch_MEM, funct3_MEM, bne_MEM, beq_MEM, bg
 Data_Memory d1(clk, Result_MEM, Read_Data_2_MEM, MemWrite_MEM, MemRead_MEM, Read_Data_MEM, funct3_MEM);
 MEM_WB m0(clk, reset, Result_MEM, Read_Data_MEM, rd_MEM, MemtoReg_MEM, RegWrite_MEM, MemtoReg_WB, RegWrite_WB, Result_WB, Read_Data_WB, rd_WB);
 MUX m5(Result_WB, Read_Data_WB, MemtoReg_WB, MUX5_Out);
-
-
-
-
-
-
-
-
-
 endmodule
