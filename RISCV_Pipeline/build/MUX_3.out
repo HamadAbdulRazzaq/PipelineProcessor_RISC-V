@@ -1,0 +1,43 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "D:\Program_Files\iverilog\lib\ivl\system.vpi";
+:vpi_module "D:\Program_Files\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "D:\Program_Files\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "D:\Program_Files\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "D:\Program_Files\iverilog\lib\ivl\va_math.vpi";
+S_00000256189b6c60 .scope module, "MUX_3" "MUX_3" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 64 "a";
+    .port_info 1 /INPUT 64 "b";
+    .port_info 2 /INPUT 64 "c";
+    .port_info 3 /INPUT 2 "s";
+    .port_info 4 /OUTPUT 64 "out";
+v00000256189b76f0_0 .net *"_ivl_1", 0 0, L_0000025618a00740;  1 drivers
+v00000256189b6df0_0 .net *"_ivl_10", 63 0, L_0000025618a01140;  1 drivers
+v00000256189b6e90_0 .net *"_ivl_3", 0 0, L_0000025618a009c0;  1 drivers
+L_0000025618a50028 .functor BUFT 1, C4<xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx>, C4<0>, C4<0>, C4<0>;
+v00000256189b6f30_0 .net *"_ivl_4", 63 0, L_0000025618a50028;  1 drivers
+v00000256189b6fd0_0 .net *"_ivl_6", 63 0, L_0000025618a01320;  1 drivers
+v00000256189b7070_0 .net *"_ivl_9", 0 0, L_0000025618a013c0;  1 drivers
+o0000025618a070b8 .functor BUFZ 64, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v00000256189be340_0 .net "a", 63 0, o0000025618a070b8;  0 drivers
+o0000025618a070e8 .functor BUFZ 64, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v00000256189be3e0_0 .net "b", 63 0, o0000025618a070e8;  0 drivers
+o0000025618a07118 .functor BUFZ 64, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0000025618a010a0_0 .net "c", 63 0, o0000025618a07118;  0 drivers
+v0000025618a00d80_0 .net "out", 63 0, L_0000025618a01280;  1 drivers
+o0000025618a07178 .functor BUFZ 2, C4<zz>; HiZ drive
+v0000025618a01000_0 .net "s", 1 0, o0000025618a07178;  0 drivers
+L_0000025618a00740 .part o0000025618a07178, 1, 1;
+L_0000025618a009c0 .part o0000025618a07178, 0, 1;
+L_0000025618a01320 .functor MUXZ 64, o0000025618a07118, L_0000025618a50028, L_0000025618a009c0, C4<>;
+L_0000025618a013c0 .part o0000025618a07178, 0, 1;
+L_0000025618a01140 .functor MUXZ 64, o0000025618a070b8, o0000025618a070e8, L_0000025618a013c0, C4<>;
+L_0000025618a01280 .functor MUXZ 64, L_0000025618a01140, L_0000025618a01320, L_0000025618a00740, C4<>;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "MUX_3.v";
