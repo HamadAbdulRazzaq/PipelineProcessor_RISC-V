@@ -205,21 +205,31 @@ module Instruction_Memory(
     // IMem[1]  = 8'b00000101;
     // IMem[0]  = 8'b00010011;
     //----- Sorting Code ^^ -----//
-    // addi x3 x0 4
-    IMem[0] = 8'b10010011;
-    IMem[1] = 8'b00000001;
-    IMem[2] = 8'b01000000;
-    IMem[3] = 8'b00000000;
-    // addi x3 x3 3
-    IMem[4] = 8'b10010011;
-    IMem[5] = 8'b10000001;
-    IMem[6] = 8'b00110001;
-    IMem[7] = 8'b00000000;
+    // // addi x3 x0 4
+    // IMem[0] = 8'b10010011;
+    // IMem[1] = 8'b00000001;
+    // IMem[2] = 8'b01000000;
+    // IMem[3] = 8'b00000000;
+    // // addi x3 x3 3
+    // IMem[4] = 8'b10010011;
+    // IMem[5] = 8'b10000001;
+    // IMem[6] = 8'b00110001;
+    // IMem[7] = 8'b00000000;
     // add x4 x0 x3
-    IMem[8] = 8'b00110011;
-    IMem[9] = 8'b00000010;
-    IMem[10] = 8'b00110000;
-    IMem[11] = 8'b00000000;
+    // IMem[8] = 8'b00110011;
+    // IMem[9] = 8'b00000010;
+    // IMem[10] = 8'b00110000;
+    // IMem[11] = 8'b00000000;
+    // 	lw x3 0(x0)
+    IMem[0] = 8'b10000011;
+    IMem[1] = 8'b00100001;
+    IMem[2] = 8'b00000000;
+    IMem[3] = 8'b00000000;
+    // add x3 x1 x0
+    IMem[4] = 8'b10110011;
+    IMem[5] = 8'b10000000;
+    IMem[6] = 8'b00000001;
+    IMem[7] = 8'b00000000;
   end
   assign Instruction[31:0] = {IMem[Inst_Address+2'b11], IMem[Inst_Address+2'b10], IMem[Inst_Address+1'b1], IMem[Inst_Address]};
   

@@ -14,7 +14,7 @@ module Program_Counter(
         PC_Out <= PC_In;
       end
       else begin
-        PC_Out <= PC_Out // The most useless line I have ever written
+        PC_Out <= PC_Out; // The most useless line I have ever written
       end
     end
 endmodule

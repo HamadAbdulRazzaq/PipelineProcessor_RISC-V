@@ -6,7 +6,7 @@ module Hazard_Detection(
     output reg stall
 );
 always @(*) begin
-  if (Mem_Read_Ex && (rd_EX == rs1_ID || rd_EX == rs2_ID)) begin
+  if (MemRead_Ex && (rd_EX == rs1_ID || rd_EX == rs2_ID)) begin
     stall <= 1'b1;
   end
   else begin
