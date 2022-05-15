@@ -120,7 +120,7 @@ wire [63:0] Index_8;
 wire [63:0] Index_9;
 Program_Counter p1(clk, reset, Init_PC_In, PC_Write, Init_PC_Out);
 Adder a1(Init_PC_Out, 64'd4, MUX1_Input1);
-MUX m1(MUX1_Input1,MUX1_Input2, to_branch_MEM,Init_PC_In);
+MUX m1(MUX1_Input1,Branch_Adder_Out_MEM, to_branch_MEM,Init_PC_In);
 Instruction_Memory i1(Init_PC_Out, Instruction_IF);
 IF_ID i2(clk, reset, Init_PC_Out, Instruction_IF, IF_ID_Write, to_branch_MEM, Instruction_ID, PC_Out_ID);
 Hazard_Detection h1(MemRead_EX, rd_EX, rs1_ID, rs2_ID, IF_ID_Write, PC_Write, Ctrl);

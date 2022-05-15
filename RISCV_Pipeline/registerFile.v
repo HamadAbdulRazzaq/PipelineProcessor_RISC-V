@@ -9,7 +9,7 @@ module registerFile(
   output reg [63:0] readdata1,
   output reg [63:0] readdata2
 );
-  
+  // reg a = 1'b0;
   reg [63:0] Registers [31:0];
   initial begin
     	Registers[0] = 64'd0;
@@ -45,12 +45,10 @@ module registerFile(
         Registers[30] = 64'd2434;
         Registers[31] = 64'd988;
   end
-  always @(posedge clk) begin
+  always @(posedge clk or posedge reg_write or rs1 or rs2 or reset) begin
     if (reg_write & rd != 5'd0) begin
     	Registers[rd] = write_data;
     end
-  // end
-  // always @(*) begin
     if (reset) begin
       readdata1 = 64'b0;
       readdata2 = 64'b0;
