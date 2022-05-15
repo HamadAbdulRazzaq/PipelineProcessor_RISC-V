@@ -49,15 +49,15 @@ module registerFile(
     if (reg_write & rd != 5'd0) begin
     	Registers[rd] = write_data;
     end
-  end
-  always @(*) begin
+  // end
+  // always @(*) begin
     if (reset) begin
-      readdata1 <= 64'b0;
-      readdata2 <= 64'b0;
+      readdata1 = 64'b0;
+      readdata2 = 64'b0;
     end
     else begin
-      readdata1 <= Registers[rs1];
-      readdata2 <= Registers[rs2];
+      readdata1 = Registers[rs1];
+      readdata2 = Registers[rs2];
     end
   end
 endmodule
