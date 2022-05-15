@@ -47,7 +47,7 @@ module registerFile(
   end
   always @(posedge clk) begin
     if (reg_write & rd != 5'd0) begin
-    	Registers[rd] <= write_data;
+    	Registers[rd] = write_data;
     end
   end
   always @(*) begin

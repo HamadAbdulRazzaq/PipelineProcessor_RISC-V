@@ -15,7 +15,7 @@ module tb();
     dreset = 1'b1;
     #10
     dreset = 1'b0;
-    #100
+    #3000
     dreset = 1'b1;
     $finish;
   end

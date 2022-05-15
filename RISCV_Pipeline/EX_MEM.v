@@ -13,6 +13,8 @@ module EX_MEM(
   input ZERO_inp,
   input [63:0] data_inp,		//Adder
   input [2:0] funct3_Ex,
+  input pos_EX,
+  input flush,
   output reg [63:0] data_out,
   output reg [63:0] Adder_B_2,
   output reg [4:0] rd_out,
@@ -23,7 +25,8 @@ module EX_MEM(
   output reg RegWrite_out,
   output reg [63:0] Result_out,
   output reg ZERO_out,
-  output reg [2:0] funct3_MEM
+  output reg [2:0] funct3_MEM,
+  output reg pos_MEM
  
 );
  
@@ -43,9 +46,11 @@ module EX_MEM(
   		   rd_out <= 0;
   		   data_out <= 0;
          funct3_MEM <= 0;
+         pos_MEM <= 0;
          end
        else 
          begin
+           pos_MEM <= pos_EX;
          funct3_MEM <= funct3_Ex;
          Adder_B_2<= Adder_B_1;
          Result_out <= Result_inp;
@@ -57,6 +62,13 @@ module EX_MEM(
   		   MemRead_out <= MemRead_inp;
   		   rd_out <= rd_inp;
   		   data_out <= data_inp;
+         end
+         if (flush == 1'b1) begin
+  		   MemtoReg_out <= 0;
+ 		     RegWrite_out <= 0;
+  		   Branch_out <= 0;
+  		   MemWrite_out <= 0;
+  		   MemRead_out <= 0;
          end
      end
 endmodule

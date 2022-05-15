@@ -17,6 +17,7 @@ module ID_EX(
   input [63:0] imm_data_inp,		//ImmediateDataExtractor
   input [63:0] PC_In,		//Program_Counter
   input [2:0] f3_ID,
+  input flush,
   output reg [63:0] PC_Out,
   output reg [3:0] Funct_out,
   output reg [1:0] ALUOp_out,
@@ -38,7 +39,7 @@ module ID_EX(
 	
    always @ (posedge clk or posedge reset)
      begin 
-       if (reset == 1'b1)
+       if (reset == 1'b1 )
          begin
            PC_Out<= 0;
            Funct_out <= 0;
@@ -76,6 +77,15 @@ module ID_EX(
   		   rd_out <= rd_inp;
   		   imm_data_out <= imm_data_inp;
          end
+        if (flush == 1'b1) begin 
+        ALUOp_out <= 0;
+        MemtoReg_out <= 0;
+        RegWrite_out <= 0;
+        Branch_out <= 0;
+        MemWrite_out <= 0;
+        MemRead_out <= 0;
+ 		    ALUSrc_out <= 0;
+        end
      end
 endmodule
       
