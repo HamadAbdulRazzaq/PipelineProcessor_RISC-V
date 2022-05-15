@@ -16,6 +16,7 @@ module ID_EX(
   input [4:0] rs2_in,
   input [63:0] imm_data_inp,		//ImmediateDataExtractor
   input [63:0] PC_In,		//Program_Counter
+  input [2:0] f3_ID,
   output reg [63:0] PC_Out,
   output reg [3:0] Funct_out,
   output reg [1:0] ALUOp_out,
@@ -30,7 +31,8 @@ module ID_EX(
   output reg [4:0] rs1_out,
   output reg [4:0] rs2_out,
   output reg [4:0] rd_out,
-  output reg [63:0] imm_data_out
+  output reg [63:0] imm_data_out,
+  output reg [2:0] f3_EX
  
 );
 	
@@ -53,9 +55,11 @@ module ID_EX(
   		   rs2_out <= 0;
   		   rd_out <= 0;
   		   imm_data_out <= 0;
+         f3_EX <= 0;
          end
        else 
          begin
+           f3_EX <= f3_ID;
            PC_Out<= PC_In;
            Funct_out <= Funct_inp ;
            ALUOp_out <= ALUOp_inp;

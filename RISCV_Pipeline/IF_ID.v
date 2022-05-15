@@ -3,7 +3,7 @@ module IF_ID(
   input reset,
   input [63:0] PC_In,
   input  [31:0] Inst_input,
-  input stall,
+  input IF_ID_Write,
   output reg [31:0] Inst_output,
   output reg [63:0] PC_Out
 
@@ -16,9 +16,9 @@ module IF_ID(
          PC_Out <= 64'd0; 
          Inst_output <= 31'd0;
       end
-    else if (stall != 1'b1)
+    else if (IF_ID_Write != 1'b0)
        begin
-         PC_Out = PC_In;
+         PC_Out <= PC_In;
          Inst_output <= Inst_input;
        end
     end

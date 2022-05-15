@@ -225,7 +225,7 @@ module Instruction_Memory(
     IMem[1] = 8'b00100001;
     IMem[2] = 8'b00000000;
     IMem[3] = 8'b00000000;
-    // add x3 x1 x0
+    // add x1 x3 x0
     IMem[4] = 8'b10110011;
     IMem[5] = 8'b10000000;
     IMem[6] = 8'b00000001;

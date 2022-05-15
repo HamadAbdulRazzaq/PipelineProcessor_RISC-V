@@ -2,7 +2,7 @@ module Program_Counter(
   input clk,
   input reset,
   input [63:0] PC_In,
-  input stall,
+  input PC_Write,
   output reg [63:0] PC_Out
 );
   always @(posedge clk or posedge reset)
@@ -10,7 +10,7 @@ module Program_Counter(
       if (reset) begin
         PC_Out <= 64'd0; 
       end
-      else if (stall != 1'b1) begin
+      else if (PC_Write != 1'b0) begin
         PC_Out <= PC_In;
       end
       else begin

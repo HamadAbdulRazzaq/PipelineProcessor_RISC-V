@@ -1,0 +1,75 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "D:\Program_Files\iverilog\lib\ivl\system.vpi";
+:vpi_module "D:\Program_Files\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "D:\Program_Files\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "D:\Program_Files\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "D:\Program_Files\iverilog\lib\ivl\va_math.vpi";
+S_0000025f1a702720 .scope module, "MUX_Control" "MUX_Control" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "Ctrl";
+    .port_info 1 /INPUT 2 "ALUOp";
+    .port_info 2 /INPUT 1 "Branch";
+    .port_info 3 /INPUT 1 "MemRead";
+    .port_info 4 /INPUT 1 "MemtoReg";
+    .port_info 5 /INPUT 1 "MemWrite";
+    .port_info 6 /INPUT 1 "ALUSrc";
+    .port_info 7 /INPUT 1 "RegWrite";
+    .port_info 8 /OUTPUT 2 "ALUOp_Out";
+    .port_info 9 /OUTPUT 1 "Branch_Out";
+    .port_info 10 /OUTPUT 1 "MemRead_Out";
+    .port_info 11 /OUTPUT 1 "MemtoReg_Out";
+    .port_info 12 /OUTPUT 1 "MemWrite_Out";
+    .port_info 13 /OUTPUT 1 "ALUSrc_Out";
+    .port_info 14 /OUTPUT 1 "RegWrite_Out";
+o0000025f1a736fd8 .functor BUFZ 2, C4<zz>; HiZ drive
+v0000025f1a726440_0 .net "ALUOp", 1 0, o0000025f1a736fd8;  0 drivers
+v0000025f1a7269e0_0 .net "ALUOp_Out", 1 0, L_0000025f1a77d8c0;  1 drivers
+o0000025f1a737038 .functor BUFZ 1, C4<z>; HiZ drive
+v0000025f1a726e40_0 .net "ALUSrc", 0 0, o0000025f1a737038;  0 drivers
+v0000025f1a7263a0_0 .net "ALUSrc_Out", 0 0, L_0000025f1a77d460;  1 drivers
+o0000025f1a737098 .functor BUFZ 1, C4<z>; HiZ drive
+v0000025f1a726d00_0 .net "Branch", 0 0, o0000025f1a737098;  0 drivers
+v0000025f1a726c60_0 .net "Branch_Out", 0 0, L_0000025f1a77c560;  1 drivers
+o0000025f1a7370f8 .functor BUFZ 1, C4<z>; HiZ drive
+v0000025f1a726a80_0 .net "Ctrl", 0 0, o0000025f1a7370f8;  0 drivers
+o0000025f1a737128 .functor BUFZ 1, C4<z>; HiZ drive
+v0000025f1a726b20_0 .net "MemRead", 0 0, o0000025f1a737128;  0 drivers
+v0000025f1a7268a0_0 .net "MemRead_Out", 0 0, L_0000025f1a77bd40;  1 drivers
+o0000025f1a737188 .functor BUFZ 1, C4<z>; HiZ drive
+v0000025f1a726bc0_0 .net "MemWrite", 0 0, o0000025f1a737188;  0 drivers
+v0000025f1a7264e0_0 .net "MemWrite_Out", 0 0, L_0000025f1a77cb00;  1 drivers
+o0000025f1a7371e8 .functor BUFZ 1, C4<z>; HiZ drive
+v0000025f1a726580_0 .net "MemtoReg", 0 0, o0000025f1a7371e8;  0 drivers
+v0000025f1a726620_0 .net "MemtoReg_Out", 0 0, L_0000025f1a77d960;  1 drivers
+o0000025f1a737248 .functor BUFZ 1, C4<z>; HiZ drive
+v0000025f1a726da0_0 .net "RegWrite", 0 0, o0000025f1a737248;  0 drivers
+v0000025f1a7266c0_0 .net "RegWrite_Out", 0 0, L_0000025f1a77cd80;  1 drivers
+L_0000025f1a77dc68 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v0000025f1a726760_0 .net/2u *"_ivl_0", 1 0, L_0000025f1a77dc68;  1 drivers
+L_0000025f1a77dd40 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0000025f1a726ee0_0 .net/2u *"_ivl_12", 0 0, L_0000025f1a77dd40;  1 drivers
+L_0000025f1a77dd88 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0000025f1a726f80_0 .net/2u *"_ivl_16", 0 0, L_0000025f1a77dd88;  1 drivers
+L_0000025f1a77ddd0 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0000025f1a727020_0 .net/2u *"_ivl_20", 0 0, L_0000025f1a77ddd0;  1 drivers
+L_0000025f1a77de18 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0000025f1a7270c0_0 .net/2u *"_ivl_24", 0 0, L_0000025f1a77de18;  1 drivers
+L_0000025f1a77dcb0 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0000025f1a77c240_0 .net/2u *"_ivl_4", 0 0, L_0000025f1a77dcb0;  1 drivers
+L_0000025f1a77dcf8 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0000025f1a77c4c0_0 .net/2u *"_ivl_8", 0 0, L_0000025f1a77dcf8;  1 drivers
+L_0000025f1a77d8c0 .functor MUXZ 2, o0000025f1a736fd8, L_0000025f1a77dc68, o0000025f1a7370f8, C4<>;
+L_0000025f1a77c560 .functor MUXZ 1, o0000025f1a737098, L_0000025f1a77dcb0, o0000025f1a7370f8, C4<>;
+L_0000025f1a77bd40 .functor MUXZ 1, o0000025f1a737128, L_0000025f1a77dcf8, o0000025f1a7370f8, C4<>;
+L_0000025f1a77d960 .functor MUXZ 1, o0000025f1a7371e8, L_0000025f1a77dd40, o0000025f1a7370f8, C4<>;
+L_0000025f1a77cb00 .functor MUXZ 1, o0000025f1a737188, L_0000025f1a77dd88, o0000025f1a7370f8, C4<>;
+L_0000025f1a77d460 .functor MUXZ 1, o0000025f1a737038, L_0000025f1a77ddd0, o0000025f1a7370f8, C4<>;
+L_0000025f1a77cd80 .functor MUXZ 1, o0000025f1a737248, L_0000025f1a77de18, o0000025f1a7370f8, C4<>;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "MUX_Control.v";

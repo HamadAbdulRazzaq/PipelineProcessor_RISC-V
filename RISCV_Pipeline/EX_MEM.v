@@ -12,6 +12,7 @@ module EX_MEM(
   input [63:0] Result_inp,	//ALU
   input ZERO_inp,
   input [63:0] data_inp,		//Adder
+  input [2:0] funct3_Ex,
   output reg [63:0] data_out,
   output reg [63:0] Adder_B_2,
   output reg [4:0] rd_out,
@@ -21,7 +22,8 @@ module EX_MEM(
   output reg MemtoReg_out, 
   output reg RegWrite_out,
   output reg [63:0] Result_out,
-  output reg ZERO_out
+  output reg ZERO_out,
+  output reg [2:0] funct3_MEM
  
 );
  
@@ -40,9 +42,11 @@ module EX_MEM(
   		   MemRead_out <= 0;
   		   rd_out <= 0;
   		   data_out <= 0;
+         funct3_MEM <= 0;
          end
        else 
          begin
+         funct3_MEM <= funct3_Ex;
          Adder_B_2<= Adder_B_1;
          Result_out <= Result_inp;
          ZERO_out <= ZERO_inp ;

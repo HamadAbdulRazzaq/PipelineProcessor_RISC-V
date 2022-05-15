@@ -7,45 +7,57 @@
 :vpi_module "D:\Program_Files\iverilog\lib\ivl\vhdl_textio.vpi";
 :vpi_module "D:\Program_Files\iverilog\lib\ivl\v2005_math.vpi";
 :vpi_module "D:\Program_Files\iverilog\lib\ivl\va_math.vpi";
-S_00000239ca3b2830 .scope module, "Hazard_Detection" "Hazard_Detection" 2 1;
+S_0000027f6d4b2830 .scope module, "Hazard_Detection" "Hazard_Detection" 2 1;
  .timescale 0 0;
     .port_info 0 /INPUT 1 "MemRead_Ex";
     .port_info 1 /INPUT 5 "rd_EX";
     .port_info 2 /INPUT 5 "rs1_ID";
     .port_info 3 /INPUT 5 "rs2_ID";
-    .port_info 4 /OUTPUT 1 "stall";
-o00000239ca3d4828 .functor BUFZ 1, C4<z>; HiZ drive
-v00000239ca3b3180_0 .net "MemRead_Ex", 0 0, o00000239ca3d4828;  0 drivers
-o00000239ca3d4858 .functor BUFZ 5, C4<zzzzz>; HiZ drive
-v00000239ca59caa0_0 .net "rd_EX", 4 0, o00000239ca3d4858;  0 drivers
-o00000239ca3d4888 .functor BUFZ 5, C4<zzzzz>; HiZ drive
-v00000239ca59cb40_0 .net "rs1_ID", 4 0, o00000239ca3d4888;  0 drivers
-o00000239ca3d48b8 .functor BUFZ 5, C4<zzzzz>; HiZ drive
-v00000239ca3b29c0_0 .net "rs2_ID", 4 0, o00000239ca3d48b8;  0 drivers
-v00000239ca3b2a60_0 .var "stall", 0 0;
-E_00000239ca59a220 .event anyedge, v00000239ca3b3180_0, v00000239ca59caa0_0, v00000239ca59cb40_0, v00000239ca3b29c0_0;
-    .scope S_00000239ca3b2830;
+    .port_info 4 /OUTPUT 1 "IF_ID_Write";
+    .port_info 5 /OUTPUT 1 "PC_Write";
+    .port_info 6 /OUTPUT 1 "Ctrl";
+v0000027f6d36af70_0 .var "Ctrl", 0 0;
+v0000027f6d36b010_0 .var "IF_ID_Write", 0 0;
+o0000027f6d4e6ff8 .functor BUFZ 1, C4<z>; HiZ drive
+v0000027f6d36b0b0_0 .net "MemRead_Ex", 0 0, o0000027f6d4e6ff8;  0 drivers
+v0000027f6d36abb0_0 .var "PC_Write", 0 0;
+o0000027f6d4e7058 .functor BUFZ 5, C4<zzzzz>; HiZ drive
+v0000027f6d36ac50_0 .net "rd_EX", 4 0, o0000027f6d4e7058;  0 drivers
+o0000027f6d4e7088 .functor BUFZ 5, C4<zzzzz>; HiZ drive
+v0000027f6d36ab10_0 .net "rs1_ID", 4 0, o0000027f6d4e7088;  0 drivers
+o0000027f6d4e70b8 .functor BUFZ 5, C4<zzzzz>; HiZ drive
+v0000027f6d36ad90_0 .net "rs2_ID", 4 0, o0000027f6d4e70b8;  0 drivers
+E_0000027f6d4e49c0 .event anyedge, v0000027f6d36b0b0_0, v0000027f6d36ac50_0, v0000027f6d36ab10_0, v0000027f6d36ad90_0;
+    .scope S_0000027f6d4b2830;
 T_0 ;
-    %wait E_00000239ca59a220;
-    %load/vec4 v00000239ca3b3180_0;
-    %load/vec4 v00000239ca59caa0_0;
-    %load/vec4 v00000239ca59cb40_0;
+    %wait E_0000027f6d4e49c0;
+    %load/vec4 v0000027f6d36b0b0_0;
+    %load/vec4 v0000027f6d36ac50_0;
+    %load/vec4 v0000027f6d36ab10_0;
     %cmp/e;
     %flag_get/vec4 4;
-    %load/vec4 v00000239ca59caa0_0;
-    %load/vec4 v00000239ca3b29c0_0;
+    %load/vec4 v0000027f6d36ac50_0;
+    %load/vec4 v0000027f6d36ad90_0;
     %cmp/e;
     %flag_get/vec4 4;
     %or;
     %and;
     %flag_set/vec4 8;
     %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0000027f6d36b010_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0000027f6d36abb0_0, 0;
     %pushi/vec4 1, 0, 1;
-    %assign/vec4 v00000239ca3b2a60_0, 0;
+    %assign/vec4 v0000027f6d36af70_0, 0;
     %jmp T_0.1;
 T_0.0 ;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0000027f6d36b010_0, 0;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0000027f6d36abb0_0, 0;
     %pushi/vec4 0, 0, 1;
-    %assign/vec4 v00000239ca3b2a60_0, 0;
+    %assign/vec4 v0000027f6d36af70_0, 0;
 T_0.1 ;
     %jmp T_0;
     .thread T_0, $push;
