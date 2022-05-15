@@ -17,6 +17,7 @@
 `include "Data_Memory.v"
 `include "MUX_3.v"
 `include "forwarding_unit.v"
+`include "Hazard_Detection.v"
 module RISC_V_Pipeline(
     input clk,
     input reset
@@ -29,6 +30,7 @@ wire [31:0] Instruction_IF;
 wire [31:0] Instruction_ID;
 wire [63:0] PC_Out_ID;
 // wire to_branch;
+wire stall;
 wire [6:0] opcode_ID;
 wire [4:0] rd_ID;
 wire [2:0] f3_ID;
@@ -95,11 +97,12 @@ wire [63:0] MUX_A_Out_EX;
 wire [63:0] MUX_B_Out_EX;
 wire [1:0] F_A;
 wire [1:0] F_B;
-Program_Counter p1(clk, reset, Init_PC_In, Init_PC_Out);
+Program_Counter p1(clk, reset, Init_PC_In, stall, Init_PC_Out);
 Adder a1(Init_PC_Out, 64'd4, MUX1_Input1);
 MUX m1(MUX1_Input1,MUX1_Input2, to_branch_MEM,Init_PC_In);
 Instruction_Memory i1(Init_PC_Out, Instruction_IF);
-IF_ID i2(clk, reset, Init_PC_Out, Instruction_IF, Instruction_ID, PC_Out_ID);
+IF_ID i2(clk, reset, Init_PC_Out, Instruction_IF, stall, Instruction_ID, PC_Out_ID);
+Hazard_Detection h1(MemRead_EX, rd_EX, rs1_ID, rs2_ID, stall);
 instruction i3(Instruction_ID, opcode_ID, rd_ID, f3_ID, rs1_ID, rs2_ID, f7_ID);
 imm_data_gen i4(Instruction_ID, imm_data_ID);   
 registerFile r1(clk, reset, rs1_ID, rs2_ID, rd_WB, MUX5_Out, RegWrite_WB, Read_Data_1_ID, Read_Data_2_ID);
@@ -120,4 +123,5 @@ branch_module b1(Zero_MEM, pos_MEM, Branch_MEM, funct3_MEM, bne_MEM, beq_MEM, bg
 Data_Memory d1(clk, Result_MEM, Read_Data_2_MEM, MemWrite_MEM, MemRead_MEM, Read_Data_MEM, funct3_MEM);
 MEM_WB m0(clk, reset, Result_MEM, Read_Data_MEM, rd_MEM, MemtoReg_MEM, RegWrite_MEM, MemtoReg_WB, RegWrite_WB, Result_WB, Read_Data_WB, rd_WB);
 MUX m5(Result_WB, Read_Data_WB, MemtoReg_WB, MUX5_Out);
+
 endmodule
