@@ -9,6 +9,8 @@
 \usepackage{spverbatim}
 \usepackage{graphicx}
 \usepackage{titling}
+\usepackage{xcolor}
+\include{risc-v.tex}
 \renewcommand\maketitlehooka{\null\mbox{}\vfill}
 \renewcommand\maketitlehookd{\vfill\null}
 \title{\textbf{Computer Architecure Lab}\\\textbf{Project Report}\\\vspace{30pt}Nimra Sohail\hspace{95pt}ns06867\\Areeb Adnan Khan\hspace{43pt}ak06865\\Hamad Abdul Razzaq\hspace{22pt}hr06899\\\vspace{30pt}\textbf{R.A: Miss Aimen Najeeb}}
@@ -16,4 +18,95 @@
 \begin{document}
 \maketitle
 \pagebreak
+\section*{\Huge Appendix}
+\subsection*{\Large Section 1 - Assembly Language Codes}
+\subsubsection*{\large Module 1.1 - Insertion Sort}
+\lstinputlisting[language={[RISC-V]Assembler}]{../Insertion Sort/insertion_sort.asm}
+\subsection*{\Large Section 2 - RISC-V Single Cycle Processor Modules}
+\subsubsection*{\large Module 2.1 - Adder}
+\lstinputlisting[language = Verilog]{../RISC_V_Single_Cycle/Adder.v}
+\subsubsection*{\large Module 2.2 - ALU (64-bit)}
+\lstinputlisting[language = Verilog]{../RISC_V_Single_Cycle/ALU_64_bit.v}
+\subsubsection*{\large Module 2.3 - ALU Control}
+\lstinputlisting[language = Verilog]{../RISC_V_Single_Cycle/ALU_Control.v}
+\subsubsection*{\large Module 2.4 - Branch Module}
+\lstinputlisting[language = Verilog]{../RISC_V_Single_Cycle/branch_module.v}
+\subsubsection*{\large Module 2.5 - Control Unit}
+\lstinputlisting[language = Verilog]{../RISC_V_Single_Cycle/Control_Unit.v}
+\subsubsection*{\large Module 2.6 - Data Memory}
+\lstinputlisting[language = Verilog]{../RISC_V_Single_Cycle/Data_Memory.v}
+\subsubsection*{\large Module 2.7 - Immediate Data Generator}
+\lstinputlisting[language = Verilog]{../RISC_V_Single_Cycle/imm_data_gen.v}
+\subsubsection*{\large Module 2.8 - Instruction Decoder}
+\lstinputlisting[language = Verilog]{../RISC_V_Single_Cycle/instruction.v}
+\subsubsection*{\large Module 2.9 - Instruction Memory}
+\lstinputlisting[language = Verilog]{../RISC_V_Single_Cycle/Instruction_Memory.v}
+\subsubsection*{\large Module 2.10 - MUX (64-bit, 2 by 1)}
+\lstinputlisting[language = Verilog]{../RISC_V_Single_Cycle/MUX.v}
+\subsubsection*{\large Module 2.11 - Program Counter}
+\lstinputlisting[language = Verilog]{../RISC_V_Single_Cycle/Program_Counter.v}
+\subsubsection*{\large Module 2.12 - Register File}
+\lstinputlisting[language = Verilog]{../RISC_V_Single_Cycle/registerFile.v}
+\subsubsection*{\large Module 2.13 - RISC-V Processor (Top Level Module)}
+\lstinputlisting[language = Verilog]{../RISC_V_Single_Cycle/RISC_V_Processor.v}
+\subsubsection*{\large Module 2.14 - Shift Left}
+\lstinputlisting[language = Verilog]{../RISC_V_Single_Cycle/shift_left.v}
+\subsubsection*{\large Module 2.15 - Test Bench}
+\lstinputlisting[language = Verilog]{../RISC_V_Single_Cycle/tb.v}
+\subsection*{\Large Section 3 - RISC-V Pipeline Processor Modules}
+\subsubsection*{\large Module 3.1 - Adder}
+\lstinputlisting[language = Verilog]{../RISCV_Pipeline/Adder.v}
+\subsubsection*{\large Module 3.2 - ALU (64-bit)}
+\lstinputlisting[language = Verilog]{../RISCV_Pipeline/ALU_64_bit.v}
+\subsubsection*{\large Module 3.3 - ALU Control}
+\lstinputlisting[language = Verilog]{../RISCV_Pipeline/ALU_Control.v}
+\subsubsection*{\large Module 3.4 - Branch Module}
+\lstinputlisting[language = Verilog]{../RISCV_Pipeline/branch_module.v}
+\subsubsection*{\large Module 3.5 - Control Unit}
+\lstinputlisting[language = Verilog]{../RISCV_Pipeline/Control_Unit.v}
+\subsubsection*{\large Module 3.6 - Data Memory}
+\lstinputlisting[language = Verilog]{../RISCV_Pipeline/Data_Memory.v}
+\subsubsection*{\large Module 3.7 - EX/MEM Stage Register}
+\lstinputlisting[language = Verilog]{../RISCV_Pipeline/EX_MEM.v}
+\subsubsection*{\large Module 3.8 - Forwarding Unit}
+\lstinputlisting[language = Verilog]{../RISCV_Pipeline/forwarding_unit.v}
+\subsubsection*{\large Module 3.9 - Hazard Detection Unit}
+\lstinputlisting[language = Verilog]{../RISCV_Pipeline/Hazard_Detection.v}
+\subsubsection*{\large Module 3.10 - ID/EX Stage Register}
+\lstinputlisting[language = Verilog]{../RISCV_Pipeline/ID_EX.v}
+\subsubsection*{\large Module 3.11 - IF/ID Stage Register}
+\lstinputlisting[language = Verilog]{../RISCV_Pipeline/IF_ID.v}
+\subsubsection*{\large Module 3.12 - Immediate Data Generator}
+\lstinputlisting[language = Verilog]{../RISCV_Pipeline/imm_data_gen.v}
+\subsubsection*{\large Module 3.13 - Instruction Decoder}
+\lstinputlisting[language = Verilog]{../RISCV_Pipeline/instruction.v}
+\subsubsection*{\large Module 3.14 - Instruction Memory}
+\lstinputlisting[language = Verilog]{../RISCV_Pipeline/Instruction_Memory.v}
+\subsubsection*{\large Module 3.15 - MEM/WB Stage Register}
+\lstinputlisting[language = Verilog]{../RISCV_Pipeline/MEM_WB.v}
+\subsubsection*{\large Module 3.16 - MUX (64-bit, 2 by 1)}
+\lstinputlisting[language = Verilog]{../RISCV_Pipeline/MUX.v}
+\subsubsection*{\large Module 3.17 - MUX (64-bit, 3 by 1)}
+\lstinputlisting[language = Verilog]{../RISCV_Pipeline/MUX_3.v}
+\subsubsection*{\large Module 3.18 - MUX (ALU Control, 16 by 8)}
+\lstinputlisting[language = Verilog]{../RISCV_Pipeline/MUX_Control.v}
+\subsubsection*{\large Module 3.19 - Program Counter}
+\lstinputlisting[language = Verilog]{../RISCV_Pipeline/Program_Counter.v}
+\subsubsection*{\large Module 3.20 - Register File}
+\lstinputlisting[language = Verilog]{../RISCV_Pipeline/registerFile.v}
+\subsubsection*{\large Module 3.21 - RISC-V Processor (Top Level Module)}
+\lstinputlisting[language = Verilog]{../RISCV_Pipeline/RISC_V_Pipeline.v}
+\subsubsection*{\large Module 3.22 - Shift Left}
+\lstinputlisting[language = Verilog]{../RISCV_Pipeline/shift_left.v}
+\subsubsection*{\large Module 3.23 - Test Bench}
+\lstinputlisting[language = Verilog]{../RISCV_Pipeline/tb.v}
+
+
+
+
+
+
+
+
+
 \end{document}

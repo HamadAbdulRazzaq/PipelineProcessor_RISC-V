@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2022.1.22)  11 MAY 2022 15:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2022.1.22)  16 MAY 2022 03:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -265,31 +265,50 @@ Package: titling 2009/09/04 v2.1d maketitle typesetting
 \thanksmarkwidth=\skip53
 \thanksmargin=\skip54
 \droptitle=\skip55
-) (D:\Users\Hamad Abdul Razzaq\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+) (D:\Users\Hamad Abdul Razzaq\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+ (D:\Users\Hamad Abdul Razzaq\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+)
+
+LaTeX Warning: \include should only be used after \begin{document} on input line 13.
+
+(risc-v.tex) (D:\Users\Hamad Abdul Razzaq\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-12-14 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count291
 \l__pdf_internal_box=\box56
 ) (report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -325,7 +344,7 @@ LaTeX Font Info:    ... okay on input line 16.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 16.
+Package hyperref Info: Link coloring OFF on input line 18.
 (D:\Users\Hamad Abdul Razzaq\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (D:\Users\Hamad Abdul Razzaq\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
@@ -335,9 +354,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count292
 )
-LaTeX Info: Redefining \ref on input line 16.
-LaTeX Info: Redefining \pageref on input line 16.
-LaTeX Info: Redefining \nameref on input line 16.
+LaTeX Info: Redefining \ref on input line 18.
+LaTeX Info: Redefining \pageref on input line 18.
+LaTeX Info: Redefining \nameref on input line 18.
  (report.out) (report.out)
 \@outlinefile=\write3
 \openout3 = `report.out'.
@@ -362,11 +381,11 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (D:\Users\Hamad Abdul Razzaq\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 17.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 19.
  (D:\Users\Hamad Abdul Razzaq\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 17.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 19.
  (D:\Users\Hamad Abdul Razzaq\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -375,22 +394,34 @@ LaTeX Warning: No \author given.
 
 [1
 
-{C:/Users/Hamad Abdul Razzaq/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (report.aux)
+{C:/Users/Hamad Abdul Razzaq/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 24.
+ (../Insertion Sort/insertion_sort.asm [2]) (D:\Users\Hamad Abdul Razzaq\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (D:\Users\Hamad Abdul Razzaq\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang2.sty
+File: lstlang2.sty 2020/03/24 1.8d listings language file
+) (D:\Users\Hamad Abdul Razzaq\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang3.sty
+File: lstlang3.sty 2020/03/24 1.8d listings language file
+) (../RISC_V_Single_Cycle/Adder.v) (../RISC_V_Single_Cycle/ALU_64_bit.v) [3] (../RISC_V_Single_Cycle/ALU_Control.v) (../RISC_V_Single_Cycle/branch_module.v [4]) (../RISC_V_Single_Cycle/Control_Unit.v [5] [6]) (../RISC_V_Single_Cycle/Data_Memory.v [7] [8] [9]) (../RISC_V_Single_Cycle/imm_data_gen.v) (../RISC_V_Single_Cycle/instruction.v) (../RISC_V_Single_Cycle/Instruction_Memory.v [10] [11] [12] [13] [14]) (../RISC_V_Single_Cycle/MUX.v) (../RISC_V_Single_Cycle/Program_Counter.v) (../RISC_V_Single_Cycle/registerFile.v [15] [16]) (../RISC_V_Single_Cycle/RISC_V_Processor.v [17]) (../RISC_V_Single_Cycle/shift_left.v) [18] (../RISC_V_Single_Cycle/tb.v
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 20.
+ (D:\Users\Hamad Abdul Razzaq\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmtt.fd
+File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)) (../RISCV_Pipeline/Adder.v) (../RISCV_Pipeline/ALU_64_bit.v [19]) (../RISCV_Pipeline/ALU_Control.v [20]) (../RISCV_Pipeline/branch_module.v [21]) (../RISCV_Pipeline/Control_Unit.v [22]) (../RISCV_Pipeline/Data_Memory.v [23] [24] [25]) (../RISCV_Pipeline/EX_MEM.v [26] [27]) (../RISCV_Pipeline/forwarding_unit.v) (../RISCV_Pipeline/Hazard_Detection.v [28]) (../RISCV_Pipeline/ID_EX.v [29] [30]) (../RISCV_Pipeline/IF_ID.v) (../RISCV_Pipeline/imm_data_gen.v [31]) (../RISCV_Pipeline/instruction.v) (../RISCV_Pipeline/Instruction_Memory.v [32] [33] [34] [35] [36]) (../RISCV_Pipeline/MEM_WB.v [37]) (../RISCV_Pipeline/MUX.v) (../RISCV_Pipeline/MUX_3.v) (../RISCV_Pipeline/MUX_Control.v [38]) (../RISCV_Pipeline/Program_Counter.v) (../RISCV_Pipeline/registerFile.v [39] [40]) (../RISCV_Pipeline/RISC_V_Pipeline.v [41] [42] [43]) (../RISCV_Pipeline/shift_left.v) (../RISCV_Pipeline/tb.v [44]) [45] (report.aux)
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 11352 strings out of 478659
- 179653 string characters out of 2839722
- 471332 words of memory out of 3000000
- 29319 multiletter control sequences out of 15000+600000
- 406933 words of font info for 41 fonts, out of 8000000 for 9000
+ 15191 strings out of 478659
+ 239597 string characters out of 2839722
+ 972093 words of memory out of 3000000
+ 30877 multiletter control sequences out of 15000+600000
+ 408926 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,6n,63p,346b,324s stack positions out of 5000i,500n,10000p,200000b,80000s
-<D:/Users/Hamad Abdul Razzaq/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Users/Hamad Abdul Razzaq/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Users/Hamad Abdul Razzaq/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on report.pdf (1 page, 37226 bytes).
+ 60i,6n,63p,628b,2065s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\Hamad Abdul Razzaq\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt1200.pk><D:/Users/Hamad Abdul Razzaq/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Users/Hamad Abdul Razzaq/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Users/Hamad Abdul Razzaq/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Users/Hamad Abdul Razzaq/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on report.pdf (45 pages, 416504 bytes).
 PDF statistics:
- 26 PDF objects out of 1000 (max. 8388607)
- 2 named destinations out of 1000 (max. 500000)
+ 2754 PDF objects out of 2984 (max. 8388607)
+ 2148 named destinations out of 2487 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
