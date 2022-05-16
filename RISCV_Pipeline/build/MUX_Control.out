@@ -7,7 +7,7 @@
 :vpi_module "D:\Program_Files\iverilog\lib\ivl\vhdl_textio.vpi";
 :vpi_module "D:\Program_Files\iverilog\lib\ivl\v2005_math.vpi";
 :vpi_module "D:\Program_Files\iverilog\lib\ivl\va_math.vpi";
-S_00000236eaa92720 .scope module, "MUX_Control" "MUX_Control" 2 1;
+S_000001fd45b5bdf0 .scope module, "MUX_Control" "MUX_Control" 2 1;
  .timescale 0 0;
     .port_info 0 /INPUT 1 "Ctrl";
     .port_info 1 /INPUT 2 "ALUOp";
@@ -24,50 +24,50 @@ S_00000236eaa92720 .scope module, "MUX_Control" "MUX_Control" 2 1;
     .port_info 12 /OUTPUT 1 "MemWrite_Out";
     .port_info 13 /OUTPUT 1 "ALUSrc_Out";
     .port_info 14 /OUTPUT 1 "RegWrite_Out";
-o00000236eaac6fd8 .functor BUFZ 2, C4<zz>; HiZ drive
-v00000236eaab69e0_0 .net "ALUOp", 1 0, o00000236eaac6fd8;  0 drivers
-v00000236eaab63a0_0 .net "ALUOp_Out", 1 0, L_00000236eab0d640;  1 drivers
-o00000236eaac7038 .functor BUFZ 1, C4<z>; HiZ drive
-v00000236eaab6da0_0 .net "ALUSrc", 0 0, o00000236eaac7038;  0 drivers
-v00000236eaab66c0_0 .net "ALUSrc_Out", 0 0, L_00000236eab0d140;  1 drivers
-o00000236eaac7098 .functor BUFZ 1, C4<z>; HiZ drive
-v00000236eaab6580_0 .net "Branch", 0 0, o00000236eaac7098;  0 drivers
-v00000236eaab61c0_0 .net "Branch_Out", 0 0, L_00000236eab0c6a0;  1 drivers
-o00000236eaac70f8 .functor BUFZ 1, C4<z>; HiZ drive
-v00000236eaab6bc0_0 .net "Ctrl", 0 0, o00000236eaac70f8;  0 drivers
-o00000236eaac7128 .functor BUFZ 1, C4<z>; HiZ drive
-v00000236eaab6a80_0 .net "MemRead", 0 0, o00000236eaac7128;  0 drivers
-v00000236eaab6c60_0 .net "MemRead_Out", 0 0, L_00000236eab0cb00;  1 drivers
-o00000236eaac7188 .functor BUFZ 1, C4<z>; HiZ drive
-v00000236eaab6260_0 .net "MemWrite", 0 0, o00000236eaac7188;  0 drivers
-v00000236eaab6440_0 .net "MemWrite_Out", 0 0, L_00000236eab0d500;  1 drivers
-o00000236eaac71e8 .functor BUFZ 1, C4<z>; HiZ drive
-v00000236eaab64e0_0 .net "MemtoReg", 0 0, o00000236eaac71e8;  0 drivers
-v00000236eaab6ee0_0 .net "MemtoReg_Out", 0 0, L_00000236eab0c4c0;  1 drivers
-o00000236eaac7248 .functor BUFZ 1, C4<z>; HiZ drive
-v00000236eaab6620_0 .net "RegWrite", 0 0, o00000236eaac7248;  0 drivers
-v00000236eaab6f80_0 .net "RegWrite_Out", 0 0, L_00000236eab0d6e0;  1 drivers
-L_00000236eab0dc68 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
-v00000236eaab7020_0 .net/2u *"_ivl_0", 1 0, L_00000236eab0dc68;  1 drivers
-L_00000236eab0dd40 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
-v00000236eaab6760_0 .net/2u *"_ivl_12", 0 0, L_00000236eab0dd40;  1 drivers
-L_00000236eab0dd88 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
-v00000236eaab70c0_0 .net/2u *"_ivl_16", 0 0, L_00000236eab0dd88;  1 drivers
-L_00000236eab0ddd0 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
-v00000236eaab6800_0 .net/2u *"_ivl_20", 0 0, L_00000236eab0ddd0;  1 drivers
-L_00000236eab0de18 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
-v00000236eaab68a0_0 .net/2u *"_ivl_24", 0 0, L_00000236eab0de18;  1 drivers
-L_00000236eab0dcb0 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
-v00000236eab0d320_0 .net/2u *"_ivl_4", 0 0, L_00000236eab0dcb0;  1 drivers
-L_00000236eab0dcf8 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
-v00000236eab0ca60_0 .net/2u *"_ivl_8", 0 0, L_00000236eab0dcf8;  1 drivers
-L_00000236eab0d640 .functor MUXZ 2, o00000236eaac6fd8, L_00000236eab0dc68, o00000236eaac70f8, C4<>;
-L_00000236eab0c6a0 .functor MUXZ 1, o00000236eaac7098, L_00000236eab0dcb0, o00000236eaac70f8, C4<>;
-L_00000236eab0cb00 .functor MUXZ 1, o00000236eaac7128, L_00000236eab0dcf8, o00000236eaac70f8, C4<>;
-L_00000236eab0c4c0 .functor MUXZ 1, o00000236eaac71e8, L_00000236eab0dd40, o00000236eaac70f8, C4<>;
-L_00000236eab0d500 .functor MUXZ 1, o00000236eaac7188, L_00000236eab0dd88, o00000236eaac70f8, C4<>;
-L_00000236eab0d140 .functor MUXZ 1, o00000236eaac7038, L_00000236eab0ddd0, o00000236eaac70f8, C4<>;
-L_00000236eab0d6e0 .functor MUXZ 1, o00000236eaac7248, L_00000236eab0de18, o00000236eaac70f8, C4<>;
+o000001fd459b7f88 .functor BUFZ 2, C4<zz>; HiZ drive
+v000001fd459a6910_0 .net "ALUOp", 1 0, o000001fd459b7f88;  0 drivers
+v000001fd459a62d0_0 .net "ALUOp_Out", 1 0, L_000001fd459feed0;  1 drivers
+o000001fd459b7fe8 .functor BUFZ 1, C4<z>; HiZ drive
+v000001fd459a6b90_0 .net "ALUSrc", 0 0, o000001fd459b7fe8;  0 drivers
+v000001fd459a6370_0 .net "ALUSrc_Out", 0 0, L_000001fd459fe1b0;  1 drivers
+o000001fd459b8048 .functor BUFZ 1, C4<z>; HiZ drive
+v000001fd459a6050_0 .net "Branch", 0 0, o000001fd459b8048;  0 drivers
+v000001fd459a65f0_0 .net "Branch_Out", 0 0, L_000001fd459fed90;  1 drivers
+o000001fd459b80a8 .functor BUFZ 1, C4<z>; HiZ drive
+v000001fd459a6410_0 .net "Ctrl", 0 0, o000001fd459b80a8;  0 drivers
+o000001fd459b80d8 .functor BUFZ 1, C4<z>; HiZ drive
+v000001fd459a6a50_0 .net "MemRead", 0 0, o000001fd459b80d8;  0 drivers
+v000001fd459a67d0_0 .net "MemRead_Out", 0 0, L_000001fd459feb10;  1 drivers
+o000001fd459b8138 .functor BUFZ 1, C4<z>; HiZ drive
+v000001fd459a69b0_0 .net "MemWrite", 0 0, o000001fd459b8138;  0 drivers
+v000001fd459a6730_0 .net "MemWrite_Out", 0 0, L_000001fd459fdb70;  1 drivers
+o000001fd459b8198 .functor BUFZ 1, C4<z>; HiZ drive
+v000001fd459a60f0_0 .net "MemtoReg", 0 0, o000001fd459b8198;  0 drivers
+v000001fd459a5f10_0 .net "MemtoReg_Out", 0 0, L_000001fd459fd170;  1 drivers
+o000001fd459b81f8 .functor BUFZ 1, C4<z>; HiZ drive
+v000001fd459a64b0_0 .net "RegWrite", 0 0, o000001fd459b81f8;  0 drivers
+v000001fd459a6cd0_0 .net "RegWrite_Out", 0 0, L_000001fd459fd2b0;  1 drivers
+L_000001fd459ff138 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v000001fd459a6af0_0 .net/2u *"_ivl_0", 1 0, L_000001fd459ff138;  1 drivers
+L_000001fd459ff210 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v000001fd459a6870_0 .net/2u *"_ivl_12", 0 0, L_000001fd459ff210;  1 drivers
+L_000001fd459ff258 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v000001fd459a6c30_0 .net/2u *"_ivl_16", 0 0, L_000001fd459ff258;  1 drivers
+L_000001fd459ff2a0 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v000001fd459a6d70_0 .net/2u *"_ivl_20", 0 0, L_000001fd459ff2a0;  1 drivers
+L_000001fd459ff2e8 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v000001fd459a6190_0 .net/2u *"_ivl_24", 0 0, L_000001fd459ff2e8;  1 drivers
+L_000001fd459ff180 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v000001fd459fdad0_0 .net/2u *"_ivl_4", 0 0, L_000001fd459ff180;  1 drivers
+L_000001fd459ff1c8 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v000001fd459fecf0_0 .net/2u *"_ivl_8", 0 0, L_000001fd459ff1c8;  1 drivers
+L_000001fd459feed0 .functor MUXZ 2, o000001fd459b7f88, L_000001fd459ff138, o000001fd459b80a8, C4<>;
+L_000001fd459fed90 .functor MUXZ 1, o000001fd459b8048, L_000001fd459ff180, o000001fd459b80a8, C4<>;
+L_000001fd459feb10 .functor MUXZ 1, o000001fd459b80d8, L_000001fd459ff1c8, o000001fd459b80a8, C4<>;
+L_000001fd459fd170 .functor MUXZ 1, o000001fd459b8198, L_000001fd459ff210, o000001fd459b80a8, C4<>;
+L_000001fd459fdb70 .functor MUXZ 1, o000001fd459b8138, L_000001fd459ff258, o000001fd459b80a8, C4<>;
+L_000001fd459fe1b0 .functor MUXZ 1, o000001fd459b7fe8, L_000001fd459ff2a0, o000001fd459b80a8, C4<>;
+L_000001fd459fd2b0 .functor MUXZ 1, o000001fd459b81f8, L_000001fd459ff2e8, o000001fd459b80a8, C4<>;
 # The file index is used to find the file name in the following table.
 :file_names 3;
     "N/A";

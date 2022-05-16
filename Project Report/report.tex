@@ -49,7 +49,41 @@ For testing purposes, There were 10 outputs added to the \hyperref[dmem]{Data Me
 \end{figure}
 \section*{\Huge Task 2 - RISC-V Pipelined Architecture}
 \subsection*{\Large Inclusion of 5 Stages and Integration}
+To Convert the Single Cycle Processor into Pipeline, 5 Stages were made which were synchornized with the clock. Along with \hyperref[pc]{Program Counter}, these include the \hyperref[if_id]{IF/ID}, \hyperref[id_ex]{ID/EX}, \hyperref[ex_mem]{EX/MEM} and \hyperref[mem_wb]{MEM/WB} stage registers. These 5 stage registers were implemented and then they were integrated in the \hyperref[tlmp]{Top Level Module} to make our processor pipelined.
 \subsection*{\Large Testing Instructions in Isolation}
+The 3 instructions listed in \hyperref[iso]{Module 1.2} of Appendix were tested separately to verify the working of pipeline. The Following three waveforms shows the different stages of the pipeline during the execution of each of these instructions.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.6]{../images/Test 1.PNG}
+    \label{img4}
+    \caption{Waveform for the instruction \texttt{add x3, x0, x1}}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.5]{../images/Test 2.PNG}
+    \label{img5}
+    \caption{Waveform for the instruction \texttt{addi x4, x0, 3}}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.51]{../images/Test 3.PNG}
+    \label{img6}
+    \caption{Waveform for the instruction \texttt{lw x7, 4(x0)}}
+\end{figure}
+\pagebreak
+\section*{\Huge Task 3 - Detection of Hazards}
+\subsection*{\Large Handling Data Hazards}
+For handling Data Hazards, the \hyperref[forward]{Forwarding Unit} and the \hyperref[hdu]{Hazard Detection Unit} were integrated to the pipelined architecture. The Forwarding Unit is used along with 2 additional MUX for bypassing the value of ALU Result from MEM stage to the EX stage, or the value of either ALUResult or the Data Memory Output from the WB Stage to the EX Stage. The Hazard Detection Unit handles the case where the data is being loaded into a register and that register is used in the instruction following the load instruction. To handle this, we introoduce a stall. This is done by not changing the values in the \hyperref[pc]{Program Counter} and \hyperref[if_id]{IF/ID} stages and setting the control values to zero in \hyperref[id_ex]{ID/EX} Stage to make the instruction analogous to stall. This is done by adding a Write signal to the first two stages which is set low when the values should remain unchanged and the Control of the third stage is set to zero by inluding an 8 by 2 \hyperref[muxc]{MUX} with one set of inputs hardwired to low.
+\subsection*{\Large Handling Control Hazards}
+The Control Hazard here is handled in the deafult way, that is, by stalling thrice whenever we have to branch. To do this the \texttt{to\_branch} signal coming from the \hyperref[branch_module]{Branch Module} is sent as a Flush signal to the \hyperref[if_id]{IF/ID}, \hyperref[id_ex]{ID/EX} and \hyperref[ex_mem]{EX/MEM} stages. The Flush signal simply makes the Control part of the instructions zero which makes the next 3 instructions equivalent to stall. After that, the branch instruction is fetched and Hence, the branch is made.
+\subsection*{\Large Running Insertion Sort on Pipelined Processor}
+To check the final functionality of the Pipelined Processor with hazards handled, The Insertion Sort Code was executed on it and the following Figure verifies the sorting code working to perfection on the pipelined architecture.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.5]{../images/PipeLine Wave.PNG}
+    \label{img6}
+    \caption{Sorted Array Waveform - Pipelined Architecture}
+\end{figure}
 \section*{\Huge Appendix}
 \subsection*{\Large Section 1 - Assembly Language Codes}
 \subsubsection*{\large Module 1.1 - Insertion Sort}
@@ -107,14 +141,19 @@ For testing purposes, There were 10 outputs added to the \hyperref[dmem]{Data Me
 \subsubsection*{\large Module 3.6 - Data Memory}
 \lstinputlisting[language = Verilog]{../RISCV_Pipeline/Data_Memory.v}
 \subsubsection*{\large Module 3.7 - EX/MEM Stage Register}
+\label{ex_mem}
 \lstinputlisting[language = Verilog]{../RISCV_Pipeline/EX_MEM.v}
 \subsubsection*{\large Module 3.8 - Forwarding Unit}
+\label{forward}
 \lstinputlisting[language = Verilog]{../RISCV_Pipeline/forwarding_unit.v}
 \subsubsection*{\large Module 3.9 - Hazard Detection Unit}
+\label{hdu}
 \lstinputlisting[language = Verilog]{../RISCV_Pipeline/Hazard_Detection.v}
 \subsubsection*{\large Module 3.10 - ID/EX Stage Register}
+\label{id_ex}
 \lstinputlisting[language = Verilog]{../RISCV_Pipeline/ID_EX.v}
 \subsubsection*{\large Module 3.11 - IF/ID Stage Register}
+\label{if_id}
 \lstinputlisting[language = Verilog]{../RISCV_Pipeline/IF_ID.v}
 \subsubsection*{\large Module 3.12 - Immediate Data Generator}
 \lstinputlisting[language = Verilog]{../RISCV_Pipeline/imm_data_gen.v}
@@ -123,18 +162,22 @@ For testing purposes, There were 10 outputs added to the \hyperref[dmem]{Data Me
 \subsubsection*{\large Module 3.14 - Instruction Memory}
 \lstinputlisting[language = Verilog]{../RISCV_Pipeline/Instruction_Memory.v}
 \subsubsection*{\large Module 3.15 - MEM/WB Stage Register}
+\label{mem_wb}
 \lstinputlisting[language = Verilog]{../RISCV_Pipeline/MEM_WB.v}
 \subsubsection*{\large Module 3.16 - MUX (64-bit, 2 by 1)}
 \lstinputlisting[language = Verilog]{../RISCV_Pipeline/MUX.v}
 \subsubsection*{\large Module 3.17 - MUX (64-bit, 3 by 1)}
 \lstinputlisting[language = Verilog]{../RISCV_Pipeline/MUX_3.v}
 \subsubsection*{\large Module 3.18 - MUX (ALU Control, 16 by 8)}
+\label{muxc}
 \lstinputlisting[language = Verilog]{../RISCV_Pipeline/MUX_Control.v}
 \subsubsection*{\large Module 3.19 - Program Counter}
+\label{pc}
 \lstinputlisting[language = Verilog]{../RISCV_Pipeline/Program_Counter.v}
 \subsubsection*{\large Module 3.20 - Register File}
 \lstinputlisting[language = Verilog]{../RISCV_Pipeline/registerFile.v}
 \subsubsection*{\large Module 3.21 - RISC-V Processor (Top Level Module)}
+\label{tlmp}
 \lstinputlisting[language = Verilog]{../RISCV_Pipeline/RISC_V_Pipeline.v}
 \subsubsection*{\large Module 3.22 - Shift Left}
 \lstinputlisting[language = Verilog]{../RISCV_Pipeline/shift_left.v}

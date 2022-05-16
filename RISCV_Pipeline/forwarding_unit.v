@@ -9,19 +9,19 @@ module forwarding_unit(
     output reg [1:0] Forward_B
 );
     always @(*) begin
-      if (rs1 == rd_MEM && RegWrite_MEM) begin
+      if (rs1 == rd_MEM && RegWrite_MEM && rd_MEM != 5'd0 ) begin
         Forward_A <= 2'b10;
       end
-      else if (rs1 == rd_WB && RegWrite_WB) begin
+      else if (rs1 == rd_WB && RegWrite_WB && rd_WB != 5'd0) begin
         Forward_A <= 2'b01;
       end
       else begin
         Forward_A <= 2'b00;
       end
-      if (rs2 == rd_MEM && RegWrite_MEM) begin
+      if (rs2 == rd_MEM && RegWrite_MEM && rd_MEM != 5'd0) begin
         Forward_B <= 2'b10;
       end
-      else if (rs2 == rd_WB && RegWrite_WB) begin
+      else if (rs2 == rd_WB && RegWrite_WB && rd_WB != 5'd0) begin
         Forward_B <= 2'b01;
       end
       else begin

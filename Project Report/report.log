@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2022.1.22)  16 MAY 2022 05:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2022.1.22)  16 MAY 2022 06:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -288,7 +288,11 @@ LaTeX Warning: \include should only be used after \begin{document} on input line
 File: l3backend-pdftex.def 2021-12-14 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count291
 \l__pdf_internal_box=\box56
-) (report.aux)
+) (report.aux
+
+LaTeX Warning: Label `img6' multiply defined.
+
+)
 \openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -424,38 +428,84 @@ File: ../images/SCP Wave.png Graphic file (type png)
 <use ../images/SCP Wave.png>
 Package pdftex.def Info: ../images/SCP Wave.png  used on input line 46.
 (pdftex.def)             Requested size: 495.72581pt x 166.74756pt.
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 57.
- (../Assembly Codes/insertion_sort.asm [4
+<../images/Test 1.PNG, id=52, 826.58812pt x 266.49562pt>
+File: ../images/Test 1.PNG Graphic file (type png)
+<use ../images/Test 1.PNG>
+Package pdftex.def Info: ../images/Test 1.PNG  used on input line 57.
+(pdftex.def)             Requested size: 495.9567pt x 159.89859pt.
+<../images/Test 2.PNG, id=53, 991.45406pt x 298.86656pt>
+File: ../images/Test 2.PNG Graphic file (type png)
+<use ../images/Test 2.PNG>
+Package pdftex.def Info: ../images/Test 2.PNG  used on input line 63.
+(pdftex.def)             Requested size: 495.72581pt x 149.4329pt.
+ [4
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.12 addi 
-          x9,  x0, 98 <../images/SCP Wave.png>]) (../Assembly Codes/isolation_tests.asm) (D:\Users\Hamad Abdul Razzaq\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+l.66 \end{figure}
+                  <../images/SCP Wave.png>]
+<../images/Test 3.PNG, id=72, 988.44281pt x 335.75438pt>
+File: ../images/Test 3.PNG Graphic file (type png)
+<use ../images/Test 3.PNG>
+Package pdftex.def Info: ../images/Test 3.PNG  used on input line 69.
+(pdftex.def)             Requested size: 504.09917pt x 171.23247pt.
+ [5
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.74 \section
+             *{\Huge Task 3 - Detection of Hazards}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.74 \section
+             *{\Huge Task 3 - Detection of Hazards}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.74 \section
+             *{\Huge Task 3 - Detection of Hazards} <../images/Test 1.PNG> <../images/Test 2.PNG> <../images/Test 3.PNG>]
+<../images/PipeLine Wave.PNG, id=93, 997.47656pt x 455.45157pt>
+File: ../images/PipeLine Wave.PNG Graphic file (type png)
+<use ../images/PipeLine Wave.PNG>
+Package pdftex.def Info: ../images/PipeLine Wave.PNG  used on input line 83.
+(pdftex.def)             Requested size: 498.73706pt x 227.72522pt.
+ [6
+pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.91 ...er}]{../Assembly Codes/insertion_sort.asm}
+                                                   <../images/PipeLine Wave.PNG>]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 91.
+ (../Assembly Codes/insertion_sort.asm [7]) (../Assembly Codes/isolation_tests.asm) (D:\Users\Hamad Abdul Razzaq\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (D:\Users\Hamad Abdul Razzaq\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang2.sty
 File: lstlang2.sty 2020/03/24 1.8d listings language file
 ) (D:\Users\Hamad Abdul Razzaq\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang3.sty
 File: lstlang3.sty 2020/03/24 1.8d listings language file
-) (../RISC_V_Single_Cycle/Adder.v [5]) (../RISC_V_Single_Cycle/ALU_64_bit.v) (../RISC_V_Single_Cycle/ALU_Control.v [6]) (../RISC_V_Single_Cycle/branch_module.v [7]) (../RISC_V_Single_Cycle/Control_Unit.v [8] [9]) (../RISC_V_Single_Cycle/Data_Memory.v [10] [11]) (../RISC_V_Single_Cycle/imm_data_gen.v [12]) (../RISC_V_Single_Cycle/instruction.v) (../RISC_V_Single_Cycle/Instruction_Memory.v [13] [14] [15] [16]) [17] (../RISC_V_Single_Cycle/MUX.v) (../RISC_V_Single_Cycle/Program_Counter.v) (../RISC_V_Single_Cycle/registerFile.v [18]) (../RISC_V_Single_Cycle/RISC_V_Processor.v [19] [20]) (../RISC_V_Single_Cycle/shift_left.v) (../RISC_V_Single_Cycle/tb.v [21]
+) (../RISC_V_Single_Cycle/Adder.v) (../RISC_V_Single_Cycle/ALU_64_bit.v [8]) (../RISC_V_Single_Cycle/ALU_Control.v) (../RISC_V_Single_Cycle/branch_module.v [9]) [10] (../RISC_V_Single_Cycle/Control_Unit.v [11]) (../RISC_V_Single_Cycle/Data_Memory.v [12] [13] [14]) (../RISC_V_Single_Cycle/imm_data_gen.v) (../RISC_V_Single_Cycle/instruction.v [15]) (../RISC_V_Single_Cycle/Instruction_Memory.v [16] [17] [18] [19]) (../RISC_V_Single_Cycle/MUX.v) (../RISC_V_Single_Cycle/Program_Counter.v) (../RISC_V_Single_Cycle/registerFile.v [20] [21]) (../RISC_V_Single_Cycle/RISC_V_Processor.v [22]) [23] (../RISC_V_Single_Cycle/shift_left.v) (../RISC_V_Single_Cycle/tb.v
 LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 20.
  (D:\Users\Hamad Abdul Razzaq\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmtt.fd
 File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)) (../RISCV_Pipeline/Adder.v) (../RISCV_Pipeline/ALU_64_bit.v [22]) (../RISCV_Pipeline/ALU_Control.v [23]) (../RISCV_Pipeline/branch_module.v [24]) (../RISCV_Pipeline/Control_Unit.v [25]) (../RISCV_Pipeline/Data_Memory.v [26] [27] [28]) (../RISCV_Pipeline/EX_MEM.v [29]) (../RISCV_Pipeline/forwarding_unit.v [30]) (../RISCV_Pipeline/Hazard_Detection.v [31]) (../RISCV_Pipeline/ID_EX.v [32]) [33] (../RISCV_Pipeline/IF_ID.v) (../RISCV_Pipeline/imm_data_gen.v [34]) (../RISCV_Pipeline/instruction.v) (../RISCV_Pipeline/Instruction_Memory.v [35] [36] [37] [38] [39]) (../RISCV_Pipeline/MEM_WB.v [40]) (../RISCV_Pipeline/MUX.v) (../RISCV_Pipeline/MUX_3.v) (../RISCV_Pipeline/MUX_Control.v [41]) (../RISCV_Pipeline/Program_Counter.v) (../RISCV_Pipeline/registerFile.v [42]) (../RISCV_Pipeline/RISC_V_Pipeline.v [43] [44] [45] [46]) (../RISCV_Pipeline/shift_left.v) (../RISCV_Pipeline/tb.v [47]) [48] (report.aux)
+)) (../RISCV_Pipeline/Adder.v) [24] (../RISCV_Pipeline/ALU_64_bit.v) (../RISCV_Pipeline/ALU_Control.v [25]) (../RISCV_Pipeline/branch_module.v [26]) (../RISCV_Pipeline/Control_Unit.v [27] [28]) (../RISCV_Pipeline/Data_Memory.v [29] [30]) (../RISCV_Pipeline/EX_MEM.v [31] [32]) (../RISCV_Pipeline/forwarding_unit.v) [33] (../RISCV_Pipeline/Hazard_Detection.v) (../RISCV_Pipeline/ID_EX.v [34] [35]) (../RISCV_Pipeline/IF_ID.v) [36] (../RISCV_Pipeline/imm_data_gen.v) (../RISCV_Pipeline/instruction.v) (../RISCV_Pipeline/Instruction_Memory.v [37] [38] [39] [40] [41]) (../RISCV_Pipeline/MEM_WB.v [42]) (../RISCV_Pipeline/MUX.v) (../RISCV_Pipeline/MUX_3.v) (../RISCV_Pipeline/MUX_Control.v [43]) (../RISCV_Pipeline/Program_Counter.v) (../RISCV_Pipeline/registerFile.v [44]) (../RISCV_Pipeline/RISC_V_Pipeline.v [45] [46] [47] [48]) (../RISCV_Pipeline/shift_left.v) (../RISCV_Pipeline/tb.v [49]) [50] (report.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 15254 strings out of 478659
- 240831 string characters out of 2839722
- 978087 words of memory out of 3000000
- 30913 multiletter control sequences out of 15000+600000
+ 15280 strings out of 478659
+ 241279 string characters out of 2839722
+ 992193 words of memory out of 3000000
+ 30949 multiletter control sequences out of 15000+600000
  409263 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,8n,63p,1253b,2101s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,8n,63p,1253b,2064s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\Hamad Abdul Razzaq\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt1200.pk> <C:\Users\Hamad Abdul Razzaq\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><D:/Users/Hamad Abdul Razzaq/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Users/Hamad Abdul Razzaq/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Users/Hamad Abdul Razzaq/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Users/Hamad Abdul Razzaq/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on report.pdf (48 pages, 478718 bytes).
+Output written on report.pdf (50 pages, 602412 bytes).
 PDF statistics:
- 2807 PDF objects out of 2984 (max. 8388607)
- 2166 named destinations out of 2487 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2820 PDF objects out of 2984 (max. 8388607)
+ 2151 named destinations out of 2487 (max. 500000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
