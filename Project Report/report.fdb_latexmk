@@ -1,6 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1652655597 "e:/Habib University/Semester 4/Computer Architecture Lab/CA_Project/Project Report/report.tex" "report.pdf" "report" 1652655603
-  "../Insertion Sort/insertion_sort.asm" 1651202540 1448 8529280cc62c19e6925763cb989dd0a0 ""
+["pdflatex"] 1652660766 "e:/Habib University/Semester 4/Computer Architecture Lab/CA_Project/Project Report/report.tex" "report.pdf" "report" 1652660770
+  "../Assembly Codes/insertion_sort.asm" 1651202540 1448 8529280cc62c19e6925763cb989dd0a0 ""
+  "../Assembly Codes/isolation_tests.asm" 1652660705 44 3d2b4142aa2680b10f761c73b17ff3e8 ""
   "../RISCV_Pipeline/ALU_64_bit.v" 1651663326 614 5f7deb9b62890374961c8d1507ed630b ""
   "../RISCV_Pipeline/ALU_Control.v" 1651203507 708 fab1886cbb17b74fa342a8fb74c32c7a ""
   "../RISCV_Pipeline/Adder.v" 1651761905 108 42723105b955500dd34bb2b59d6349df ""
@@ -39,9 +40,14 @@
   "../RISC_V_Single_Cycle/registerFile.v" 1651202782 1712 4a96fee8d7b1a910792ca4c46b3a4ee4 ""
   "../RISC_V_Single_Cycle/shift_left.v" 1651203580 102 802723e5b9041a3c482bc8e20471a415 ""
   "../RISC_V_Single_Cycle/tb.v" 1651681368 413 bf6bada9ada32cff4b718f2e4b298938 ""
+  "../images/SCP Wave.png" 1652659848 41052 2eda00b17526d0a23310a4ef51a9bc8e ""
+  "../images/Sorted Array.png" 1652656838 14174 972c6b9e3ce04c320b732ca8639f55b0 ""
+  "../images/Unsorted Array.png" 1652656818 14164 57880996843aeeb6bcc059dcb19d3522 ""
   "C:/Users/Hamad Abdul Razzaq/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1649126866 82845 61cd0b62b4b3ff8abe9a94ac0f89d652 ""
+  "C:/Users/Hamad Abdul Razzaq/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1642841906 14064 06bdce2eb8b432a5d39a4192f0ccbf4e ""
   "C:/Users/Hamad Abdul Razzaq/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tctt1200.pk" 1652654710 11368 14df197e9605416e051cc0835723d685 ""
   "C:/Users/Hamad Abdul Razzaq/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1642841507 9776165 3a18b6cfa596619996211424770162fb ""
+  "D:/Users/Hamad Abdul Razzaq/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm1200.tfm" 993062508 1444 95ffe0f19b974d50849790c8225c7ef7 ""
   "D:/Users/Hamad Abdul Razzaq/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tctt1200.tfm" 993062566 1284 6abcddffeae037bf4ed0c8e16ae5cd52 ""
   "D:/Users/Hamad Abdul Razzaq/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "D:/Users/Hamad Abdul Razzaq/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1233951854 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -126,9 +132,9 @@
   "D:/Users/Hamad Abdul Razzaq/AppData/Local/Programs/MiKTeX/tex/latex/titling/titling.sty" 1252048308 7358 95ac619994bd30d405a74f3eca431c84 ""
   "D:/Users/Hamad Abdul Razzaq/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "D:/Users/Hamad Abdul Razzaq/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1636284872 56029 3f7889dab51d620aa43177c391b7b190 ""
-  "e:/Habib University/Semester 4/Computer Architecture Lab/CA_Project/Project Report/report.tex" 1652655591 5982 35376ca791fdc6b096840630777202e2 ""
-  "report.aux" 1652655602 7026 bad01b9aa1042f65e7bb89e0b196a636 "pdflatex"
-  "report.out" 1652655600 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "e:/Habib University/Semester 4/Computer Architecture Lab/CA_Project/Project Report/report.tex" 1652660761 9863 3d9f48777463b909499dc74d0e8f443f ""
+  "report.aux" 1652660769 8315 b0cfe95b43f0307de433e85adbc51338 "pdflatex"
+  "report.out" 1652660767 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "risc-v.tex" 1652653273 2802 456b1d085cf4e6b7959d184e0c2927cf ""
   (generated)
   "report.aux"

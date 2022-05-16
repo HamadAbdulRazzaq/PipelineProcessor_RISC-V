@@ -13,33 +13,73 @@
 \include{risc-v.tex}
 \renewcommand\maketitlehooka{\null\mbox{}\vfill}
 \renewcommand\maketitlehookd{\vfill\null}
-\title{\textbf{Computer Architecure Lab}\\\textbf{Project Report}\\\vspace{30pt}Nimra Sohail\hspace{95pt}ns06867\\Areeb Adnan Khan\hspace{43pt}ak06865\\Hamad Abdul Razzaq\hspace{22pt}hr06899\\\vspace{30pt}\textbf{R.A: Miss Aimen Najeeb}}
+\title{\textbf{\Huge Computer Architecure Lab}\\\textbf{\Huge Project Report}\\\vspace{30pt}Nimra Sohail\hspace{95pt}ns06867\\Areeb Adnan Khan\hspace{43pt}ak06865\\Hamad Abdul Razzaq\hspace{22pt}hr06899\\\vspace{30pt}\textbf{R.A: Miss Aimen Najeeb}}
 \date{}
 \begin{document}
 \maketitle
 \pagebreak
+\section*{\Huge Task 1 - Implementing Sorting Algorithm on RISC-V Single Cycle Processor}
+\subsection*{\Large Selection of Algorithm, Assembly Language Code \& Verification}
+The selected Sorting Algorithm is the Insertion Sort Algorithm. Its Assembly Language Code can be found in \hyperref[ins_sort]{Module 1.1} in the Appendix. The Module was tested on a RISC-V Simulator and the initial and final arrays can be seen in \hyperref[img1]{Figure 1} and \hyperref[img2]{Figure 2} respectively.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 1]{../images/Unsorted Array.png}
+    \label{img1}
+    \caption{Initialized (Unsorted) Array}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 1]{../images/Sorted Array.png}
+    \label{img2}
+    \caption{Sorted Array}
+\end{figure}
+\subsection*{\Large Modifications in Single Cycle Processor \& Challenges Addressed}
+For executing the assembly language code of insertion sort on our lab-made single cycle processor, Following were the required modifications and the way we addressed it.
+\begin{itemize}
+    \item \textbf{Inclusion of \texttt{blt, bge, bne, beq} Instructions} - As any Sorting Algorithm requires less than, greater than, equal to and not equal to comparisions, therefore there was a need to include these four instructions. To do so, a seperate module named \hyperref[branch_module]{Branch Module} was created. This module, in addition with the Zero Flag also takes a Positve Flag as an input which indicates whether the Operand 1 is greater than Operand 2 or not. The Positive Flag is outputed from \hyperref[alu]{ALU} by simply looking at the most significant bit of the result. So first, we check the branch signal to see if the instruction is a branch instruction. Then, to differentiate between these four branch instructions, we compare their funct3 values along with the zero and the positive flags and the instruction whose specified conditions are matched is set to high and at the same time, the other instructions are set to low. This module also includes a \texttt{to\_branch} output which is high if branch condition is met. So, the AND Gate from our previous design is replaced by this branch module.
+    \item \textbf{Addition of Load Word and Store Word Instructions} - The Load Word and Store Word functionality was added in the \hyperref[dmem]{Data Memory}. This required because our insertion sort algorithm is implemented on a word array. So, inorder to differentiate between the Load and Store instructions for Word and Double, the funct3 values of the instructions were checked and based on that the load and store instructions for word and double wereintegrated.
+\end{itemize}
+\subsection*{\Large Testing and Verification}
+For testing purposes, There were 10 outputs added to the \hyperref[dmem]{Data Memory} module. These 10 outpus are for the 10 different indices of the array to be sorted. This is not the art of the Single Cycle Processor, rather they are just hard wired to make the verification easier. Upon Converting the assembly language code into machine code and initlizing it in the \hyperref[imem]{Instruction Memory}, the code was executed and the sorted array can be verified from the waveform shown in \hyperref[img3]{Figure 3}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.5]{../images/SCP Wave.png}
+    \label{img3}
+    \caption{Waveform - Single Cycle Processor}
+\end{figure}
+\section*{\Huge Task 2 - RISC-V Pipelined Architecture}
+\subsection*{\Large Inclusion of 5 Stages and Integration}
+\subsection*{\Large Testing Instructions in Isolation}
 \section*{\Huge Appendix}
 \subsection*{\Large Section 1 - Assembly Language Codes}
 \subsubsection*{\large Module 1.1 - Insertion Sort}
-\lstinputlisting[language={[RISC-V]Assembler}]{../Insertion Sort/insertion_sort.asm}
+\label{ins_sort}
+\lstinputlisting[language={[RISC-V]Assembler}]{../Assembly Codes/insertion_sort.asm}
+\subsubsection*{\large Module 1.2 - Isolation Tests}
+\label{iso}
+\lstinputlisting[language={[RISC-V]Assembler}]{../Assembly Codes/isolation_tests.asm}
 \subsection*{\Large Section 2 - RISC-V Single Cycle Processor Modules}
 \subsubsection*{\large Module 2.1 - Adder}
 \lstinputlisting[language = Verilog]{../RISC_V_Single_Cycle/Adder.v}
 \subsubsection*{\large Module 2.2 - ALU (64-bit)}
+\label{alu}
 \lstinputlisting[language = Verilog]{../RISC_V_Single_Cycle/ALU_64_bit.v}
 \subsubsection*{\large Module 2.3 - ALU Control}
 \lstinputlisting[language = Verilog]{../RISC_V_Single_Cycle/ALU_Control.v}
 \subsubsection*{\large Module 2.4 - Branch Module}
+\label{branch_module}
 \lstinputlisting[language = Verilog]{../RISC_V_Single_Cycle/branch_module.v}
 \subsubsection*{\large Module 2.5 - Control Unit}
 \lstinputlisting[language = Verilog]{../RISC_V_Single_Cycle/Control_Unit.v}
 \subsubsection*{\large Module 2.6 - Data Memory}
+\label{dmem}
 \lstinputlisting[language = Verilog]{../RISC_V_Single_Cycle/Data_Memory.v}
 \subsubsection*{\large Module 2.7 - Immediate Data Generator}
 \lstinputlisting[language = Verilog]{../RISC_V_Single_Cycle/imm_data_gen.v}
 \subsubsection*{\large Module 2.8 - Instruction Decoder}
 \lstinputlisting[language = Verilog]{../RISC_V_Single_Cycle/instruction.v}
 \subsubsection*{\large Module 2.9 - Instruction Memory}
+\label{imem}
 \lstinputlisting[language = Verilog]{../RISC_V_Single_Cycle/Instruction_Memory.v}
 \subsubsection*{\large Module 2.10 - MUX (64-bit, 2 by 1)}
 \lstinputlisting[language = Verilog]{../RISC_V_Single_Cycle/MUX.v}

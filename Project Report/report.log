@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2022.1.22)  16 MAY 2022 03:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2022.1.22)  16 MAY 2022 05:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -395,33 +395,67 @@ LaTeX Warning: No \author given.
 [1
 
 {C:/Users/Hamad Abdul Razzaq/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 24.
- (../Insertion Sort/insertion_sort.asm [2]) (D:\Users\Hamad Abdul Razzaq\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+<../images/Unsorted Array.png, id=14, 301.125pt x 391.4625pt>
+File: ../images/Unsorted Array.png Graphic file (type png)
+<use ../images/Unsorted Array.png>
+Package pdftex.def Info: ../images/Unsorted Array.png  used on input line 26.
+(pdftex.def)             Requested size: 301.12425pt x 391.46153pt.
+<../images/Sorted Array.png, id=16, 302.63063pt x 395.22656pt>
+File: ../images/Sorted Array.png Graphic file (type png)
+<use ../images/Sorted Array.png>
+Package pdftex.def Info: ../images/Sorted Array.png  used on input line 32.
+(pdftex.def)             Requested size: 302.62988pt x 395.22559pt.
+ [2
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.36 \subsection
+                *{\Large Modifications in Single Cycle Processor \& Challeng... <../images/Unsorted Array.png>]
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 39.
+ [3
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.41 \end{itemize}
+                   <../images/Sorted Array.png>]
+<../images/SCP Wave.png, id=44, 991.45406pt x 333.49594pt>
+File: ../images/SCP Wave.png Graphic file (type png)
+<use ../images/SCP Wave.png>
+Package pdftex.def Info: ../images/SCP Wave.png  used on input line 46.
+(pdftex.def)             Requested size: 495.72581pt x 166.74756pt.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 57.
+ (../Assembly Codes/insertion_sort.asm [4
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.12 addi 
+          x9,  x0, 98 <../images/SCP Wave.png>]) (../Assembly Codes/isolation_tests.asm) (D:\Users\Hamad Abdul Razzaq\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (D:\Users\Hamad Abdul Razzaq\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang2.sty
 File: lstlang2.sty 2020/03/24 1.8d listings language file
 ) (D:\Users\Hamad Abdul Razzaq\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang3.sty
 File: lstlang3.sty 2020/03/24 1.8d listings language file
-) (../RISC_V_Single_Cycle/Adder.v) (../RISC_V_Single_Cycle/ALU_64_bit.v) [3] (../RISC_V_Single_Cycle/ALU_Control.v) (../RISC_V_Single_Cycle/branch_module.v [4]) (../RISC_V_Single_Cycle/Control_Unit.v [5] [6]) (../RISC_V_Single_Cycle/Data_Memory.v [7] [8] [9]) (../RISC_V_Single_Cycle/imm_data_gen.v) (../RISC_V_Single_Cycle/instruction.v) (../RISC_V_Single_Cycle/Instruction_Memory.v [10] [11] [12] [13] [14]) (../RISC_V_Single_Cycle/MUX.v) (../RISC_V_Single_Cycle/Program_Counter.v) (../RISC_V_Single_Cycle/registerFile.v [15] [16]) (../RISC_V_Single_Cycle/RISC_V_Processor.v [17]) (../RISC_V_Single_Cycle/shift_left.v) [18] (../RISC_V_Single_Cycle/tb.v
+) (../RISC_V_Single_Cycle/Adder.v [5]) (../RISC_V_Single_Cycle/ALU_64_bit.v) (../RISC_V_Single_Cycle/ALU_Control.v [6]) (../RISC_V_Single_Cycle/branch_module.v [7]) (../RISC_V_Single_Cycle/Control_Unit.v [8] [9]) (../RISC_V_Single_Cycle/Data_Memory.v [10] [11]) (../RISC_V_Single_Cycle/imm_data_gen.v [12]) (../RISC_V_Single_Cycle/instruction.v) (../RISC_V_Single_Cycle/Instruction_Memory.v [13] [14] [15] [16]) [17] (../RISC_V_Single_Cycle/MUX.v) (../RISC_V_Single_Cycle/Program_Counter.v) (../RISC_V_Single_Cycle/registerFile.v [18]) (../RISC_V_Single_Cycle/RISC_V_Processor.v [19] [20]) (../RISC_V_Single_Cycle/shift_left.v) (../RISC_V_Single_Cycle/tb.v [21]
 LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 20.
  (D:\Users\Hamad Abdul Razzaq\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmtt.fd
 File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)) (../RISCV_Pipeline/Adder.v) (../RISCV_Pipeline/ALU_64_bit.v [19]) (../RISCV_Pipeline/ALU_Control.v [20]) (../RISCV_Pipeline/branch_module.v [21]) (../RISCV_Pipeline/Control_Unit.v [22]) (../RISCV_Pipeline/Data_Memory.v [23] [24] [25]) (../RISCV_Pipeline/EX_MEM.v [26] [27]) (../RISCV_Pipeline/forwarding_unit.v) (../RISCV_Pipeline/Hazard_Detection.v [28]) (../RISCV_Pipeline/ID_EX.v [29] [30]) (../RISCV_Pipeline/IF_ID.v) (../RISCV_Pipeline/imm_data_gen.v [31]) (../RISCV_Pipeline/instruction.v) (../RISCV_Pipeline/Instruction_Memory.v [32] [33] [34] [35] [36]) (../RISCV_Pipeline/MEM_WB.v [37]) (../RISCV_Pipeline/MUX.v) (../RISCV_Pipeline/MUX_3.v) (../RISCV_Pipeline/MUX_Control.v [38]) (../RISCV_Pipeline/Program_Counter.v) (../RISCV_Pipeline/registerFile.v [39] [40]) (../RISCV_Pipeline/RISC_V_Pipeline.v [41] [42] [43]) (../RISCV_Pipeline/shift_left.v) (../RISCV_Pipeline/tb.v [44]) [45] (report.aux)
+)) (../RISCV_Pipeline/Adder.v) (../RISCV_Pipeline/ALU_64_bit.v [22]) (../RISCV_Pipeline/ALU_Control.v [23]) (../RISCV_Pipeline/branch_module.v [24]) (../RISCV_Pipeline/Control_Unit.v [25]) (../RISCV_Pipeline/Data_Memory.v [26] [27] [28]) (../RISCV_Pipeline/EX_MEM.v [29]) (../RISCV_Pipeline/forwarding_unit.v [30]) (../RISCV_Pipeline/Hazard_Detection.v [31]) (../RISCV_Pipeline/ID_EX.v [32]) [33] (../RISCV_Pipeline/IF_ID.v) (../RISCV_Pipeline/imm_data_gen.v [34]) (../RISCV_Pipeline/instruction.v) (../RISCV_Pipeline/Instruction_Memory.v [35] [36] [37] [38] [39]) (../RISCV_Pipeline/MEM_WB.v [40]) (../RISCV_Pipeline/MUX.v) (../RISCV_Pipeline/MUX_3.v) (../RISCV_Pipeline/MUX_Control.v [41]) (../RISCV_Pipeline/Program_Counter.v) (../RISCV_Pipeline/registerFile.v [42]) (../RISCV_Pipeline/RISC_V_Pipeline.v [43] [44] [45] [46]) (../RISCV_Pipeline/shift_left.v) (../RISCV_Pipeline/tb.v [47]) [48] (report.aux)
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 15191 strings out of 478659
- 239597 string characters out of 2839722
- 972093 words of memory out of 3000000
- 30877 multiletter control sequences out of 15000+600000
- 408926 words of font info for 48 fonts, out of 8000000 for 9000
+ 15254 strings out of 478659
+ 240831 string characters out of 2839722
+ 978087 words of memory out of 3000000
+ 30913 multiletter control sequences out of 15000+600000
+ 409263 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,6n,63p,628b,2065s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\Hamad Abdul Razzaq\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt1200.pk><D:/Users/Hamad Abdul Razzaq/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Users/Hamad Abdul Razzaq/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Users/Hamad Abdul Razzaq/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Users/Hamad Abdul Razzaq/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on report.pdf (45 pages, 416504 bytes).
+ 60i,8n,63p,1253b,2101s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\Hamad Abdul Razzaq\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt1200.pk> <C:\Users\Hamad Abdul Razzaq\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><D:/Users/Hamad Abdul Razzaq/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Users/Hamad Abdul Razzaq/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Users/Hamad Abdul Razzaq/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Users/Hamad Abdul Razzaq/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on report.pdf (48 pages, 478718 bytes).
 PDF statistics:
- 2754 PDF objects out of 2984 (max. 8388607)
- 2148 named destinations out of 2487 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2807 PDF objects out of 2984 (max. 8388607)
+ 2166 named destinations out of 2487 (max. 500000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
