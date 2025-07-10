@@ -1,8 +1,14 @@
-**** module/scope: Adder
+**** module/scope: Instruction_Memory
      Flip-Flops   : 0
-     Logic Gates  : 128
-     ADDER[64]: 1 units
+     Logic Gates  : 390
+     ADDER[65]: 3 units
+     LPM[30]: 4 unaccounted
+     LOG[13]: 1 unaccounted
+     LOG[14]: 1 unaccounted
 **** TOTALS
      Flip-Flops   : 0
-     Logic Gates  : 128
-     ADDER[64]: 1 units
+     Logic Gates  : 390
+     ADDER[65]: 3 units
+     LPM[30]: 4 unaccounted
+     LOG[13]: 1 unaccounted
+     LOG[14]: 1 unaccounted
